@@ -3,7 +3,7 @@
 **Create a powerful, modern developer portfolio in minutes — fully customizable through a single JSON file and enhanced by AI.**  
 No coding knowledge required. Just configure, deploy, and showcase your best self.
 
-![Portfolio Preview](https://raw.githubusercontent.com/anujjainbatu/ai-portfolio-system-landing-page/refs/heads/main/assets/portfolio.png)
+![Portfolio Preview](https://raw.githubusercontent.com/sheraztariq22/PortFolio_Sheraz/main/public/portfolio.png)
 
 <p align="center">
   <a href="https://portfolio.anujjainbatu.tech/"><img src="https://img.shields.io/badge/Demo-Live%20Site-brightgreen" alt="Live Demo"></a>
