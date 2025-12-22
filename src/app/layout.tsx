@@ -14,12 +14,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Anuj Jain - Full-stack Python Developer & AI Engineer | Professional Portfolio",
-    template: "%s | Anuj Jain Portfolio"
+    default: "Sheraz Tariq - Full-stack Python Developer & AI Engineer | Professional Portfolio",
+    template: "%s | Sheraz Tariq Portfolio"
   },
-  description: "Professional portfolio of Anuj Jain - Full-stack Python Developer & AI Engineer. SIH 2025 Finalist showcasing 25+ automation projects, IoT systems, and AI-powered solutions. Available for internships.",
+  description: "Professional portfolio of Sheraz Tariq - Full-stack Python Developer & AI Engineer. SIH 2025 Finalist showcasing 25+ automation projects, IoT systems, and AI-powered solutions. Available for internships.",
   keywords: [
-    "Anuj Jain",
+    "Sheraz Tariq",
     "Full-stack Developer", 
     "Python Developer",
     "AI Engineer",
@@ -47,12 +47,12 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Anuj Jain",
-      url: "https://portfolio.anujjainbatu.tech/",
+      name: "Sheraz Tariq",
+      url: "url",
     },
   ],
-  creator: "Anuj Jain",
-  publisher: "Anuj Jain",
+  creator: "Sheraz Tariq",
+  publisher: "Sheraz Tariq",
   robots: {
     index: true,
     follow: true,
@@ -68,28 +68,28 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://portfolio.anujjainbatu.tech/",
-    title: "Anuj Jain - Full-stack Python Developer & AI Engineer | Professional Portfolio",
+    title: "Sheraz Tariq - Full-stack Python Developer & AI Engineer | Professional Portfolio",
     description: "Professional portfolio showcasing AI-powered projects, IoT systems, and full-stack development. SIH 2025 Finalist with 25+ automation projects. Available for internships.",
-    siteName: "Anuj Jain Portfolio",
+    siteName: "Sheraz Tariq Portfolio",
     images: [
       {
         url: "https://portfolio.anujjainbatu.tech/portfolio.png",
         width: 1200,
         height: 630,
-        alt: "Anuj Jain - Professional Portfolio with AI Chatbot",
+        alt: "Sheraz Tariq - Professional Portfolio with AI Chatbot",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anuj Jain - Full-stack Python Developer & AI Engineer",
+    title: "Sheraz Tariq - Full-stack Python Developer & AI Engineer",
     description: "Professional portfolio showcasing AI projects, IoT systems, and automation solutions. SIH 2025 Finalist available for internships.",
     creator: "@anujainbatu",
     site: "@anujainbatu",
     images: [{
       url: "https://portfolio.anujjainbatu.tech/portfolio.png",
-      alt: "Anuj Jain Professional Portfolio"
+      alt: "Sheraz Tariq Professional Portfolio"
     }],
   },
   icons: {
@@ -130,7 +130,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Anuj Jain",
+              "name": "Sheraz Tariq",
               "jobTitle": "Full-stack Python Developer & AI Engineer",
               "url": "https://portfolio.anujjainbatu.tech/",
               "image": "https://portfolio.anujjainbatu.tech/profile.jpeg",

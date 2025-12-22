@@ -69,7 +69,7 @@ const AvailabilityCard = ({ data }: AvailabilityCardProps) => {
           </div>
           <div>
             <h2 className="text-foreground text-2xl font-semibold">
-              Anuj Jain
+              Sheraz Tariq
             </h2>
             <p className="text-muted-foreground text-sm">
               Available for Opportunities
