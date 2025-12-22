@@ -135,9 +135,9 @@ export default function RootLayout({
               "url": "https://portfolio.anujjainbatu.tech/",
               "image": "https://portfolio.anujjainbatu.tech/profile.jpeg",
               "sameAs": [
-                "https://github.com/anujjainbatu",
-                "https://linkedin.com/in/anujjainbatu",
-                "https://x.com/anujainbatu"
+                  "https://www.linkedin.com/in/sheraz-tariq-12434a239/",
+                  "https://github.com/sheraztariq22",
+                  "https://x.com/SherazT17522925",
               ],
               "worksFor": {
                 "@type": "Organization",

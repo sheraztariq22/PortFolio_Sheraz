@@ -59,13 +59,13 @@
       "category": "Blockchain/AI",
       "description": "Developed a comprehensive community automation web application that leverages blockchain technology and AI to streamline community operations. Implemented advanced user interaction features to significantly enhance community engagement and participation. Built decentralized infrastructure for transparent community management.",
       "techStack": ["Blockchain", "IBM Blockchain", "AI", "JavaScript", "Python", "Smart Contracts"],
-      "date": "January 2023 - March 2023",
+      "date": "September 2024 - June 2025",
       "status": "Completed",
       "featured": true,
       "links": [
         {
           "name": "GitHub",
-          "url": "https://github.com/sheraztariq22/community-blockchain"
+          "url": "https://github.com/sheraztariq22/Community-Automation-Blockchain"
         }
       ],
       "images": []
@@ -75,29 +75,13 @@
       "category": "AI/NLP",
       "description": "Executed the complete RAG (Retrieval-Augmented Generation) workflow from data extraction to intelligent generation. Utilized LangChain and LlamaIndex for efficient processing and retrieval, creating an engaging icebreaker conversation bot. Implemented context-aware responses for natural conversations.",
       "techStack": ["Python", "LangChain", "LlamaIndex", "RAG", "NLP", "LLMs"],
-      "date": "February 2023 - May 2023",
+      "date": "December 2025 - December 2025",
       "status": "Completed",
       "featured": true,
       "links": [
         {
           "name": "GitHub",
-          "url": "https://github.com/sheraztariq/ai-icebreaker"
-        }
-      ],
-      "images": []
-    },
-    {
-      "title": "Face Recognition System Using ConvNet",
-      "category": "Computer Vision/Deep Learning",
-      "description": "Designed and implemented a sophisticated face recognition system based on Convolutional Neural Networks. Developed advanced detection algorithms capable of accurately recognizing and identifying individuals' faces in various conditions. Achieved high accuracy in real-time face detection and recognition.",
-      "techStack": ["Python", "TensorFlow", "Keras", "Deep Learning", "ConvNet", "NumPy", "Computer Vision"],
-      "date": "June 2023 - August 2023",
-      "status": "Completed",
-      "featured": true,
-      "links": [
-        {
-          "name": "GitHub",
-          "url": "https://github.com/sheraztariq/face-recognition"
+          "url": "https://github.com/sheraztariq22/Icebreaker-Bot"
         }
       ],
       "images": []
@@ -107,31 +91,47 @@
       "category": "AI/Machine Learning",
       "description": "Developed an intelligent food recommendation system leveraging RAG (Retrieval-Augmented Generation) and vector similarity search. Integrated Google Gemini API to enhance recommendation accuracy and provide personalized food suggestions based on user preferences. Built scalable architecture for real-time recommendations.",
       "techStack": ["Python", "RAG", "Vector Search", "Google Gemini API", "NLP", "Machine Learning"],
-      "date": "December 2023 - February 2024",
+      "date": "December 2025 - December 2025",
       "status": "Completed",
       "featured": true,
       "links": [
         {
           "name": "GitHub",
-          "url": "https://github.com/sheraztariq/food-recommender"
+          "url": "https://github.com/sheraztariq22/Food-Recommendation-System-Via-RAG"
         }
       ],
       "images": []
     },
     {
-      "title": "QA Bot",
+      "title": "AI-Nutrition-Coach-via-Multi-Agent",
       "category": "AI/NLP",
-      "description": "Created a sophisticated question-answer chatbot using LangChain and RAG (Retrieval-Augmented Generation) models. Enabled the bot to provide accurate, contextually relevant answers using Large Language Models and efficient retrieval mechanisms. Implemented context management for multi-turn conversations.",
+      "description": "Build and deploy a multi-agent system that powers intelligent decision-making. Integrate multimodal AI to handle both visual and textual data. Create a user-friendly interface using Gradio, so your app is accessible to anyone.",
       "techStack": ["Python", "LangChain", "RAG", "LLMs", "NLP", "Question Answering"],
-      "date": "September 2023 - November 2023",
+      "date": "December 2025 - December 2025",
       "status": "Completed",
       "featured": true,
       "links": [
         {
           "name": "GitHub",
-          "url": "https://github.com/sheraztariq/qa-bot"
+          "url": "https://github.com/sheraztariq22/AI-Nutrition-Coach-via-Multi-Agent"
         }
       ],
+      "images": []
+    },
+    {
+      "title": "Youtube-Summarizer",
+      "category": "AI/NLP",
+      "description": "In this project, I've build a question-answering (QA) tool capable of extracting and summarizing information from YouTube videos. Leveraging LangChain and a large language model (LLM), the tool will answer specific questions based on a video's transcript.",
+      "techStack": ["Python", "LangChain", "NLP", "LLMs", "Data Extraction"],
+      "date": "December 2025 - December 2025",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/sheraztariq22/Youtube-Summarizer"  
+        }
+       ],
       "images": []
     }
   ],
@@ -170,7 +170,7 @@
     "fileType": "PDF",
     "lastUpdated": "December 2024",
     "fileSize": "1.8 MB",
-    "downloadUrl": "/SherazTariqResume.pdf"
+    "downloadUrl": "https://sheraztariq22.github.io/sheraztariq22/SherazTariqResume.pdf"
   },
   "chatbot": {
     "name": "Sheraz",
