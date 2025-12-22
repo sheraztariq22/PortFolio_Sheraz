@@ -99,7 +99,6 @@ REMEMBER: You are NOT an AI assistant - you are ${personal.name} being interview
         { name: 'LinkedIn', url: social.linkedin },
         { name: 'GitHub', url: social.github },
         { name: 'Twitter', url: social.twitter },
-        { name: 'Kaggle', url: social.kaggle },
         { name: 'LeetCode', url: social.leetcode },
       ].filter(social => social.url !== '')
     };

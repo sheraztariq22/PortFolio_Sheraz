@@ -1,7 +1,7 @@
 {
   "personal": {
     "name": "Sheraz Tariq",
-    "age": 23,
+    "age": 25,
     "location": "Affandi Colony, Rawalpindi, Pakistan",
     "title": "Full-stack Developer & AI/ML Engineer",
     "email": "sheraztariq2978@gmail.com",
@@ -65,7 +65,7 @@
       "links": [
         {
           "name": "GitHub",
-          "url": "https://github.com/sheraztariq/community-blockchain"
+          "url": "https://github.com/sheraztariq22/community-blockchain"
         }
       ],
       "images": []
@@ -136,9 +136,10 @@
     }
   ],
   "social": {
-    "linkedin": "https://linkedin.com/in/sheraztariq",
-    "github": "https://github.com/sheraztariq",
-    "twitter": "https://twitter.com/sheraztariq",
+    "linkedin": "https://www.linkedin.com/in/sheraz-tariq-12434a239/",
+    "github": "https://github.com/sheraztariq22",
+    "twitter": "https://x.com/SherazT17522925",
+    "leetcode": "https://leetcode.com/u/sheraztariq22/",
     "portfolio": "https://sheraztariq.com/"
   },
   "internship": {

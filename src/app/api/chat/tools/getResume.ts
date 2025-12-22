@@ -19,7 +19,6 @@ export const getResume = tool({
           github: config.social.github,
           linkedin: config.social.linkedin,
           twitter: config.social.twitter,
-          kaggle: config.social.kaggle,
           leetcode: config.social.leetcode
         }
       },
