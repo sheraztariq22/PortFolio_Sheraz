@@ -1,263 +1,239 @@
 {
   "personal": {
     "name": "Sheraz Tariq",
-    "title": "Software Engineer",
-    "tagline": "Full Stack Developer | AI/ML Enthusiast | DevOps Engineer",
-    "bio": "Highly motivated Software Engineering graduate with over a year of experience as a Full Stack Developer. Specialized in AI/ML and DevOps with proven proficiency in Python, MERN stack, and CI/CD implementation. Passionate about creating scalable and innovative software solutions for high-growth startups.",
-    "location": "Rawalpindi, Pakistan",
+    "age": 23,
+    "location": "Affandi Colony, Rawalpindi, Pakistan",
+    "title": "Full-stack Developer & AI/ML Engineer",
     "email": "sheraztariq2978@gmail.com",
     "phone": "+92 340 5437523",
-    "avatar": "https://via.placeholder.com/400x400/4A90E2/ffffff?text=ST",
-    "social": {
-      "github": "https://github.com/sheraztariq",
-      "linkedin": "https://linkedin.com/in/sheraztariq",
-      "twitter": "https://twitter.com/sheraztariq"
-    }
+    "handle": "@sheraztariq",
+    "bio": "Hey 👋\nI'm Sheraz, a highly motivated Full-stack Developer and AI/ML Engineer with over a year of professional experience. I specialize in building scalable enterprise CRM solutions, AI-powered applications, and DevOps automation. Passionate about leveraging cutting-edge technologies like RAG, LangChain, and blockchain to create innovative software solutions.",
+    "avatar": "/profile.jpeg",
+    "fallbackAvatar": "https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3"
   },
-  "summary": {
-    "headline": "Building Intelligent Solutions with Modern Technology",
-    "description": "I am a highly motivated Software Engineering graduate with over a year of experience as a Full Stack Developer. My background includes a strong focus on AI/ML and DevOps, with proven proficiency in Python, modern MERN stack concepts, and CI/CD implementation. I am eager to leverage my skills to contribute to a high-growth startup, creating scalable and innovative software solutions.",
-    "highlights": [
-      "1+ year of professional Full Stack Development experience",
-      "Strong expertise in AI/ML and DevOps technologies",
-      "Led multiple AI and DevOps projects improving efficiency",
-      "Proficient in enterprise CRM platform development"
+  "education": {
+    "current": {
+      "degree": "B.S. in Software Engineering",
+      "institution": "FAST - National University of Computer and Emerging Sciences",
+      "duration": "2021-2025",
+      "cgpa": "3.5/4.0",
+      "graduationDate": "June 2025"
+    },
+    "previous": {
+      "degree": "F.Sc in Physics, Chemistry, Mathematics",
+      "institution": "Jinnah Institute of Computer Science",
+      "duration": "2018-2020",
+      "percentage": "85%",
+      "completionDate": "June 2020"
+    },
+    "achievements": [
+      "Successfully led development of multiple AI and DevOps projects",
+      "Improved system efficiency through automation and CI/CD implementation",
+      "Built scalable enterprise CRM solutions for high-availability systems",
+      "Specialized in AI/ML with focus on RAG, NLP, and Deep Learning"
     ]
   },
   "experience": [
     {
-      "id": "exp-1",
-      "title": "Full Stack Developer",
       "company": "SAGE TECK",
-      "location": "Islamabad, Pakistan",
-      "startDate": "2024-03",
-      "endDate": "Present",
-      "current": true,
-      "description": "Technology company specializing in CRM solutions",
-      "responsibilities": [
-        "Engineered and maintained critical features for enterprise CRM platforms SugarCRM and SuiteCRM, ensuring robust performance and high system availability",
-        "Contributed to the software development lifecycle, focusing on building scalable backend logic",
-        "Assisted in modernizing deployment workflows, improving development efficiency by participating in quality assurance and integration testing processes"
-      ],
-      "technologies": ["Python", "SugarCRM", "SuiteCRM", "Integration Testing", "CI/CD"],
-      "image": "https://via.placeholder.com/800x400/2ECC71/ffffff?text=SAGE+TECK"
-    }
-  ],
-  "education": [
-    {
-      "id": "edu-1",
-      "degree": "Bachelor of Science in Software Engineering",
-      "institution": "FAST - National University of Computer and Emerging Sciences",
-      "location": "Islamabad, Pakistan",
-      "startDate": "2021-08",
-      "endDate": "2025-06",
-      "gpa": "",
-      "description": "Comprehensive software engineering program covering full-stack development, AI/ML, and DevOps practices",
-      "image": "https://via.placeholder.com/600x300/3498DB/ffffff?text=FAST+NUCES"
-    },
-    {
-      "id": "edu-2",
-      "degree": "F.Sc in Physics, Chemistry, Mathematics",
-      "institution": "Jinnah Institute of Computer Science",
-      "location": "Rawalpindi, Punjab",
-      "startDate": "2018-08",
-      "endDate": "2020-06",
-      "description": "Pre-engineering with focus on sciences and mathematics"
-    },
-    {
-      "id": "edu-3",
-      "degree": "Matriculation in Physics, Chemistry, Mathematics",
-      "institution": "Aga Khan Higher Secondary School",
-      "location": "Gilgit",
-      "startDate": "2015-08",
-      "endDate": "2017-06",
-      "description": "Secondary education with science subjects"
+      "position": "Full Stack Developer",
+      "type": "Full-time",
+      "duration": "March 2024 - Present",
+      "description": "Technology company specializing in CRM solutions. Engineered and maintained critical features for enterprise CRM platforms SugarCRM and SuiteCRM, ensuring robust performance and high system availability. Contributed to the software development lifecycle, focusing on building scalable backend logic. Assisted in modernizing deployment workflows, improving development efficiency by participating in quality assurance and integration testing processes.",
+      "technologies": ["Python", "SugarCRM", "SuiteCRM", "Integration Testing", "CI/CD", "DevOps", "Backend Development", "Quality Assurance"]
     }
   ],
   "skills": {
-    "categories": [
-      {
-        "name": "Programming Languages",
-        "skills": [
-          { "name": "Python", "level": 90, "icon": "🐍" },
-          { "name": "JavaScript", "level": 85, "icon": "📜" },
-          { "name": "SQL", "level": 80, "icon": "🗃️" }
-        ]
-      },
-      {
-        "name": "AI & Machine Learning",
-        "skills": [
-          { "name": "TensorFlow", "level": 85, "icon": "🧠" },
-          { "name": "Keras", "level": 85, "icon": "🤖" },
-          { "name": "Deep Learning", "level": 80, "icon": "🔬" },
-          { "name": "NLP", "level": 75, "icon": "💬" },
-          { "name": "Linear Regression", "level": 75, "icon": "📊" },
-          { "name": "Numpy", "level": 85, "icon": "🔢" }
-        ]
-      },
-      {
-        "name": "DevOps & Cloud",
-        "skills": [
-          { "name": "Docker", "level": 85, "icon": "🐳" },
-          { "name": "Kubernetes", "level": 75, "icon": "☸️" },
-          { "name": "Jenkins", "level": 80, "icon": "🔧" },
-          { "name": "AWS", "level": 75, "icon": "☁️" },
-          { "name": "Azure", "level": 70, "icon": "🌐" }
-        ]
-      },
-      {
-        "name": "Backend & Databases",
-        "skills": [
-          { "name": "Django", "level": 85, "icon": "🎸" },
-          { "name": "NoSQL", "level": 80, "icon": "📦" },
-          { "name": "SQL", "level": 85, "icon": "🗄️" }
-        ]
-      },
-      {
-        "name": "CRM & Enterprise",
-        "skills": [
-          { "name": "SugarCRM", "level": 85, "icon": "🍬" },
-          { "name": "SAGE CRM", "level": 80, "icon": "💼" },
-          { "name": "Integration Testing", "level": 80, "icon": "✅" }
-        ]
-      },
-      {
-        "name": "Tools & Frameworks",
-        "skills": [
-          { "name": "Jupyter Notebook", "level": 85, "icon": "📓" },
-          { "name": "Streamlit", "level": 75, "icon": "🎨" },
-          { "name": "IBM Blockchain", "level": 70, "icon": "🔗" }
-        ]
-      }
-    ]
+    "programming": ["Python", "JavaScript", "SQL", "HTML/CSS"],
+    "ml_ai": ["TensorFlow", "Keras", "Deep Learning", "NLP", "Linear Regression", "NumPy", "LangChain", "LlamaIndex", "RAG", "Computer Vision", "ConvNet"],
+    "web_development": ["Django", "MERN Stack", "FastAPI", "REST APIs", "Streamlit", "Jupyter Notebook"],
+    "databases": ["SQL", "NoSQL", "MongoDB", "PostgreSQL"],
+    "devops_cloud": ["Docker", "Kubernetes", "Jenkins", "AWS", "Azure", "CI/CD", "Git"],
+    "iot_hardware": [],
+    "soft_skills": ["Problem Solving", "Team Leadership", "Software Development Lifecycle", "Quality Assurance", "Project Management"]
   },
+  "certifications": [],
   "projects": [
     {
-      "id": "proj-1",
       "title": "Community Automation System Using Blockchain",
-      "shortDescription": "Blockchain and AI-powered community management platform",
-      "fullDescription": "Developed a comprehensive community automation web application that leverages blockchain technology and AI to streamline community operations. Implemented advanced user interaction features to significantly enhance community engagement and participation.",
-      "startDate": "2023-01",
-      "endDate": "2023-03",
-      "technologies": ["Blockchain", "IBM Blockchain", "AI", "JavaScript", "Python"],
-      "features": [
-        "Blockchain-based transaction management",
-        "AI-powered community insights",
-        "User interaction and engagement features",
-        "Decentralized community operations"
+      "category": "Blockchain/AI",
+      "description": "Developed a comprehensive community automation web application that leverages blockchain technology and AI to streamline community operations. Implemented advanced user interaction features to significantly enhance community engagement and participation. Built decentralized infrastructure for transparent community management.",
+      "techStack": ["Blockchain", "IBM Blockchain", "AI", "JavaScript", "Python", "Smart Contracts"],
+      "date": "January 2023 - March 2023",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/sheraztariq/community-blockchain"
+        }
       ],
-      "image": "https://via.placeholder.com/800x500/9B59B6/ffffff?text=Blockchain+Community",
-      "github": "https://github.com/sheraztariq/community-blockchain",
-      "demo": "",
-      "category": "Blockchain"
+      "images": []
     },
     {
-      "id": "proj-2",
       "title": "AI Icebreaker Bot",
-      "shortDescription": "RAG-based conversational AI assistant",
-      "fullDescription": "Executed the complete RAG (Retrieval-Augmented Generation) workflow from data extraction to intelligent generation. Utilized LangChain and LlamaIndex for efficient processing and retrieval, creating an engaging icebreaker conversation bot.",
-      "startDate": "2023-02",
-      "endDate": "2023-05",
-      "technologies": ["Python", "LangChain", "LlamaIndex", "RAG", "NLP"],
-      "features": [
-        "Complete RAG workflow implementation",
-        "LangChain integration for context management",
-        "LlamaIndex for efficient data retrieval",
-        "Conversational AI capabilities"
+      "category": "AI/NLP",
+      "description": "Executed the complete RAG (Retrieval-Augmented Generation) workflow from data extraction to intelligent generation. Utilized LangChain and LlamaIndex for efficient processing and retrieval, creating an engaging icebreaker conversation bot. Implemented context-aware responses for natural conversations.",
+      "techStack": ["Python", "LangChain", "LlamaIndex", "RAG", "NLP", "LLMs"],
+      "date": "February 2023 - May 2023",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/sheraztariq/ai-icebreaker"
+        }
       ],
-      "image": "https://via.placeholder.com/800x500/E74C3C/ffffff?text=AI+Icebreaker",
-      "github": "https://github.com/sheraztariq/ai-icebreaker",
-      "demo": "",
-      "category": "AI/ML"
+      "images": []
     },
     {
-      "id": "proj-3",
       "title": "Face Recognition System Using ConvNet",
-      "shortDescription": "Deep learning-based face detection and recognition",
-      "fullDescription": "Designed and implemented a sophisticated face recognition system based on Convolutional Neural Networks. Developed advanced detection algorithms capable of accurately recognizing and identifying individuals' faces in various conditions.",
-      "startDate": "2023-06",
-      "endDate": "2023-08",
-      "technologies": ["Python", "TensorFlow", "Keras", "Deep Learning", "ConvNet", "Numpy"],
-      "features": [
-        "Convolutional Neural Network architecture",
-        "Real-time face detection",
-        "Individual face recognition",
-        "High accuracy detection algorithms"
+      "category": "Computer Vision/Deep Learning",
+      "description": "Designed and implemented a sophisticated face recognition system based on Convolutional Neural Networks. Developed advanced detection algorithms capable of accurately recognizing and identifying individuals' faces in various conditions. Achieved high accuracy in real-time face detection and recognition.",
+      "techStack": ["Python", "TensorFlow", "Keras", "Deep Learning", "ConvNet", "NumPy", "Computer Vision"],
+      "date": "June 2023 - August 2023",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/sheraztariq/face-recognition"
+        }
       ],
-      "image": "https://via.placeholder.com/800x500/3498DB/ffffff?text=Face+Recognition",
-      "github": "https://github.com/sheraztariq/face-recognition",
-      "demo": "",
-      "category": "AI/ML"
+      "images": []
     },
     {
-      "id": "proj-4",
       "title": "Food Recommendation System",
-      "shortDescription": "Intelligent food recommendation using RAG and vector search",
-      "fullDescription": "Developed an intelligent food recommendation system leveraging RAG (Retrieval-Augmented Generation) and vector similarity search. Integrated Google Gemini API to enhance recommendation accuracy and provide personalized food suggestions based on user preferences.",
-      "startDate": "2023-12",
-      "endDate": "2024-02",
-      "technologies": ["Python", "RAG", "Vector Search", "Google Gemini", "NLP"],
-      "features": [
-        "RAG-based recommendation engine",
-        "Vector similarity search implementation",
-        "Google Gemini integration",
-        "Personalized food suggestions"
+      "category": "AI/Machine Learning",
+      "description": "Developed an intelligent food recommendation system leveraging RAG (Retrieval-Augmented Generation) and vector similarity search. Integrated Google Gemini API to enhance recommendation accuracy and provide personalized food suggestions based on user preferences. Built scalable architecture for real-time recommendations.",
+      "techStack": ["Python", "RAG", "Vector Search", "Google Gemini API", "NLP", "Machine Learning"],
+      "date": "December 2023 - February 2024",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/sheraztariq/food-recommender"
+        }
       ],
-      "image": "https://via.placeholder.com/800x500/F39C12/ffffff?text=Food+Recommendations",
-      "github": "https://github.com/sheraztariq/food-recommender",
-      "demo": "",
-      "category": "AI/ML"
+      "images": []
     },
     {
-      "id": "proj-5",
       "title": "QA Bot",
-      "shortDescription": "Question-answering chatbot using LangChain and RAG",
-      "fullDescription": "Created a sophisticated question-answer chatbot using LangChain and RAG (Retrieval-Augmented Generation) models. Enabled the bot to provide accurate, contextually relevant answers using Large Language Models and efficient retrieval mechanisms.",
-      "startDate": "2023-09",
-      "endDate": "2023-11",
-      "technologies": ["Python", "LangChain", "RAG", "LLMs", "NLP"],
-      "features": [
-        "LangChain framework integration",
-        "RAG model implementation",
-        "LLM-powered responses",
-        "Context-aware question answering"
+      "category": "AI/NLP",
+      "description": "Created a sophisticated question-answer chatbot using LangChain and RAG (Retrieval-Augmented Generation) models. Enabled the bot to provide accurate, contextually relevant answers using Large Language Models and efficient retrieval mechanisms. Implemented context management for multi-turn conversations.",
+      "techStack": ["Python", "LangChain", "RAG", "LLMs", "NLP", "Question Answering"],
+      "date": "September 2023 - November 2023",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/sheraztariq/qa-bot"
+        }
       ],
-      "image": "https://via.placeholder.com/800x500/1ABC9C/ffffff?text=QA+Bot",
-      "github": "https://github.com/sheraztariq/qa-bot",
-      "demo": "",
-      "category": "AI/ML"
+      "images": []
     }
   ],
-  "achievements": [
-    {
-      "id": "ach-1",
-      "title": "AI and DevOps Leadership",
-      "description": "Successfully led the development of multiple AI and DevOps projects that streamlined processes and improved efficiency",
-      "date": "2023-2024",
-      "icon": "🏆"
-    }
-  ],
-  "certifications": [
-    {
-      "id": "cert-1",
-      "name": "Add your certifications here",
-      "issuer": "Certification Authority",
-      "date": "2024",
-      "credentialId": "",
-      "link": ""
-    }
-  ],
-  "theme": {
-    "primaryColor": "#4A90E2",
-    "secondaryColor": "#2ECC71",
-    "accentColor": "#E74C3C",
-    "backgroundColor": "#FFFFFF",
-    "textColor": "#333333",
-    "font": "Inter, sans-serif"
+  "social": {
+    "linkedin": "https://linkedin.com/in/sheraztariq",
+    "github": "https://github.com/sheraztariq",
+    "twitter": "https://twitter.com/sheraztariq",
+    "portfolio": "https://sheraztariq.com/"
   },
-  "seo": {
-    "title": "Sheraz Tariq - Software Engineer | Full Stack Developer",
-    "description": "Portfolio of Sheraz Tariq, a Full Stack Developer specializing in AI/ML and DevOps. Experienced in Python, MERN stack, and enterprise CRM solutions.",
-    "keywords": ["Full Stack Developer", "Software Engineer", "AI/ML", "DevOps", "Python", "JavaScript", "SugarCRM", "TensorFlow", "Docker", "Kubernetes"]
+  "internship": {
+    "seeking": true,
+    "duration": "3-6 months",
+    "startDate": "Available immediately",
+    "preferredLocation": "Remote or On-site (Islamabad/Rawalpindi)",
+    "focusAreas": ["Full-stack Development", "AI/ML Engineering", "DevOps", "Enterprise Solutions"],
+    "availability": "Available for immediate start",
+    "workStyle": "Fast learner, team player, problem solver with hands-on experience in production CRM systems and AI applications",
+    "goals": "Join an innovative startup or tech company building scalable solutions. I want to contribute to meaningful projects while growing my skills in enterprise-level development, AI/ML systems, and cloud infrastructure."
+  },
+  "personality": {
+    "traits": ["motivated", "innovative", "detail-oriented", "collaborative", "results-driven"],
+    "interests": ["AI/ML", "Blockchain Technology", "DevOps", "Cloud Computing", "Enterprise Software", "Automation", "Deep Learning"],
+    "funFacts": [
+      "Successfully led multiple AI and DevOps projects improving efficiency",
+      "Built enterprise CRM solutions ensuring high system availability",
+      "Experienced in complete RAG workflow implementation",
+      "Proficient in both frontend and backend development"
+    ],
+    "workingStyle": "I focus on building scalable, high-quality solutions with attention to system performance and reliability",
+    "motivation": "Creating innovative software solutions that solve real-world problems through AI, automation, and modern development practices"
+  },
+  "resume": {
+    "title": "Sheraz Tariq - Resume",
+    "description": "Full-stack Developer & AI/ML Engineer | Enterprise CRM Specialist | DevOps Enthusiast",
+    "fileType": "PDF",
+    "lastUpdated": "December 2024",
+    "fileSize": "1.8 MB",
+    "downloadUrl": "/SherazTariqResume.pdf"
+  },
+  "chatbot": {
+    "name": "Sheraz",
+    "personality": "professional, knowledgeable, tech-savvy",
+    "tone": "friendly and conversational",
+    "language": "english",
+    "responseStyle": "clear and informative",
+    "useEmojis": true,
+    "topics": ["projects", "skills", "experience", "internship", "contact", "education", "certifications", "achievements"]
+  },
+  "presetQuestions": {
+    "me": [
+      "Who are you?",
+      "Tell me about yourself",
+      "What's your background?",
+      "What are your passions?",
+      "How did you get started in tech?",
+      "What motivates you?"
+    ],
+    "professional": [
+      "What are your skills?",
+      "Can I see your resume?",
+      "What's your experience?",
+      "Are you looking for opportunities?",
+      "What makes you a valuable team member?",
+      "Tell me about your work at SAGE TECK",
+      "Why should I hire you?",
+      "What's your educational background?",
+      "What are your DevOps skills?"
+    ],
+    "projects": [
+      "What projects are you most proud of?",
+      "Tell me about your AI projects",
+      "What are your recent projects?",
+      "Tell me about your blockchain project",
+      "What are you working on?",
+      "Show me your machine learning projects",
+      "Tell me about your RAG implementations"
+    ],
+    "achievements": [
+      "What are your major achievements?",
+      "Tell me about your project successes",
+      "What impact have you made?",
+      "What are you proud of?"
+    ],
+    "contact": [
+      "How can I reach you?",
+      "How can I contact you?",
+      "What's your email?",
+      "Where can I find you online?",
+      "Where are you located?",
+      "Are you available for hire?"
+    ],
+    "fun": [
+      "What are your interests?",
+      "Tell me something interesting about you",
+      "What motivates you?",
+      "What's a fun fact about you?"
+    ]
+  },
+  "meta": {
+    "configVersion": "2.0",
+    "lastUpdated": "2024-12-22",
+    "generatedBy": "Sheraz Tariq",
+    "description": "Portfolio configuration for Sheraz Tariq - Full-stack Developer & AI/ML Engineer with enterprise CRM experience"
   }
 }
