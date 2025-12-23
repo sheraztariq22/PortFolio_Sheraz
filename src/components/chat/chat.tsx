@@ -1,6 +1,6 @@
 'use client';
 import { useChat } from '@ai-sdk/react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, Transition } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import { useSearchParams } from 'next/navigation';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -65,7 +65,12 @@ const Avatar = dynamic<AvatarProps>(
   { ssr: false }
 );
 
-const MOTION_CONFIG = {
+const MOTION_CONFIG: {
+  initial: { opacity: number; y: number };
+  animate: { opacity: number; y: number };
+  exit: { opacity: number; y: number };
+  transition: Transition;
+} = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: 20 },
@@ -74,6 +79,7 @@ const MOTION_CONFIG = {
     ease: 'easeOut',
   },
 };
+
 
 const Chat = () => {
   const searchParams = useSearchParams();

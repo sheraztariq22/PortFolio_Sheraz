@@ -7,6 +7,7 @@ import {
 import { ChatRequestOptions } from 'ai';
 import { Message } from 'ai/react';
 import { motion } from 'framer-motion';
+import { Transition } from 'framer-motion';
 import ChatMessageContent from './chat-message-content';
 import ToolRenderer from './tool-renderer';
 
@@ -19,13 +20,19 @@ interface SimplifiedChatViewProps {
   addToolResult?: (args: { toolCallId: string; result: string }) => void;
 }
 
-const MOTION_CONFIG = {
+const MOTION_CONFIG: {
+  initial: { opacity: number; y: number };
+  animate: { opacity: number; y: number };
+  exit: { opacity: number; y: number };
+  transition: Transition;
+} = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: 20 },
   transition: {
     duration: 0.3,
-    ease: 'easeOut',
+    // cubic-bezier equivalent of "easeOut"
+    ease: [0.16, 1, 0.3, 1],
   },
 };
 

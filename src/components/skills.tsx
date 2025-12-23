@@ -3,6 +3,7 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
+import { easeOut } from 'framer-motion';
 import { Code, Cpu, PenTool, Users, Database, Cloud, Microchip, Brain } from 'lucide-react';
 import { getConfig } from '@/lib/config-loader';
 
@@ -72,7 +73,7 @@ const Skills = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
+      transition: { duration: 0.6, ease: easeOut },
     },
   };
 
@@ -81,7 +82,7 @@ const Skills = () => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.3, ease: 'easeOut' },
+      transition: { duration: 0.3, ease: easeOut },
     },
   };
 
