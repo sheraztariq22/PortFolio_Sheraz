@@ -114,3 +114,174 @@ pre {
   word-wrap: normal;
   overflow-x: auto;
 }
+
+/* Emergency fix for project overlapping */
+* {
+  box-sizing: border-box;
+}
+
+/* Fix dialog/modal z-index */
+[role="dialog"] {
+  z-index: 9999 !important;
+}
+
+[data-state="open"] {
+  z-index: 9999 !important;
+}
+
+/* Fix Radix UI Dialog specifically */
+.radix-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.radix-dialog-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+/* Dark mode fix */
+.dark .radix-dialog-content {
+  background: oklch(0.21 0.006 285.885);
+}
+
+/* Ensure proper stacking context for carousel */
+.carousel-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix for modal overlay */
+[data-vaul-drawer-wrapper] {
+  z-index: 9998 !important;
+}
+
+[data-vaul-drawer] {
+  z-index: 9999 !important;
+}
+
+/* Fix for Vaul drawer overlay */
+.vaul-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  z-index: 9998 !important;
+}
+
+/* Fix for Vaul drawer content */
+.vaul-drawer {
+  position: fixed !important;
+  z-index: 9999 !important;
+}
+
+/* Ensure card modals are on top */
+.card-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  backdrop-filter: blur(4px);
+}
+
+.card-modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Dark mode for modal */
+.dark .card-modal-content {
+  background: oklch(0.21 0.006 285.885);
+  color: oklch(0.985 0 0);
+}
+
+/* Prevent body scroll when modal is open */
+body:has([data-state="open"]) {
+  overflow: hidden;
+}
+
+/* Fix for framer-motion modals */
+[data-framer-motion-modal] {
+  z-index: 9999 !important;
+  position: fixed !important;
+}
+
+/* Ensure carousel items don't overlap modal */
+.carousel-item {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-item.active {
+  z-index: 2;
+}
+
+/* Fix for expanded card state */
+[data-expanded="true"] {
+  z-index: 9999 !important;
+  position: fixed !important;
+}
+
+/* Additional fixes for Radix UI components */
+[data-radix-portal] {
+  z-index: 9999 !important;
+}
+
+/* Smooth scrolling for modal content */
+.card-modal-content {
+  scroll-behavior: smooth;
+}
+
+.card-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card-modal-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.card-modal-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.card-modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark mode scrollbar */
+.dark .card-modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .card-modal-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.dark .card-modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Add this to your globals.css file (document 3) */
+

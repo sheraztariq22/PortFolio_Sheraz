@@ -280,10 +280,10 @@ const Chat = () => {
   const headerHeight = hasActiveTool ? 100 : 180;
 
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative h-screen overflow-hidden" data-chat-page>
       {/* Fixed Avatar Header with Gradient */}
       <div
-        className="fixed top-0 right-0 left-0 z-50"
+        className="chat-header-container fixed top-0 right-0 left-0 z-50"
         style={{
           background:
             'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)',
@@ -323,7 +323,7 @@ const Chat = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="container mx-auto flex h-full max-w-3xl flex-col">
+      <div className="chat-content-container container mx-auto flex h-full max-w-3xl flex-col">
         {/* Scrollable Chat Content */}
         <div
           className="flex-1 overflow-y-auto px-2 pb-4"
@@ -451,13 +451,15 @@ const Chat = () => {
         </div>
 
         {/* Fixed Bottom Bar */}
-        <div className="sticky bottom-0 bg-white px-2 pt-3 md:px-0 md:pb-4">
+        <div className="chat-bottombar-container sticky bottom-0 bg-white px-2 pt-3 md:px-0 md:pb-4">
           <div className="relative flex flex-col items-center gap-3">
-            <HelperBoost 
-              submitQuery={submitQuery} 
-              setInput={setInput} 
-              handlePresetReply={handlePresetReply}
-            />
+            <div className="helper-boost-container">
+              <HelperBoost 
+                submitQuery={submitQuery} 
+                setInput={setInput} 
+                handlePresetReply={handlePresetReply}
+              />
+            </div>
             <ChatBottombar
               input={input}
               handleInputChange={handleInputChange}

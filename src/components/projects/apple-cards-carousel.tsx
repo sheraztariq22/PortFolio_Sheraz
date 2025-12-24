@@ -136,7 +136,7 @@ export const Carousel = ({
         >
           <div
             className={cn(
-              'absolute right-0 z-[10] h-auto w-[5%] overflow-hidden bg-gradient-to-l'
+              'absolute right-0 z-[1] h-auto w-[5%] overflow-hidden bg-gradient-to-l'
             )}
           ></div>
 
@@ -171,14 +171,14 @@ export const Carousel = ({
         </div>
         <div className="mr-10 flex justify-end gap-2 md:mr-20">
           <button
-            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 disabled:opacity-50"
+            className="relative z-[2] flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 disabled:opacity-50"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
           >
             <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
           </button>
           <button
-            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 disabled:opacity-50"
+            className="relative z-[2] flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 disabled:opacity-50"
             onClick={scrollRight}
             disabled={!canScrollRight}
           >
@@ -212,8 +212,12 @@ export const Card = ({
 
     if (open) {
       document.body.style.overflow = 'hidden';
+      // Add attribute to hide chatbot
+      document.body.setAttribute('data-project-modal-open', 'true');
     } else {
       document.body.style.overflow = 'auto';
+      // Remove attribute to show chatbot
+      document.body.removeAttribute('data-project-modal-open');
     }
 
     window.addEventListener('keydown', onKeyDown);
@@ -236,12 +240,12 @@ export const Card = ({
     <>
       <AnimatePresence>
         {open && (
-          <div className="fixed inset-0 z-52 h-screen overflow-auto">
+          <div className="fixed inset-0 z-[99999] h-screen overflow-auto">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 h-full w-full bg-black/80 backdrop-blur-lg"
+              className="fixed inset-0 z-[99998] h-full w-full bg-black/80 backdrop-blur-lg"
             />
             <motion.div
               initial={{ opacity: 0 }}
@@ -249,10 +253,10 @@ export const Card = ({
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white font-sans dark:bg-neutral-900"
+              className="relative z-[99999] mx-auto my-10 h-fit w-[95vw] max-w-7xl rounded-3xl bg-white font-sans dark:bg-neutral-900"
             >
               {/* Sticky close button */}
-              <div className="sticky top-4 z-52 flex justify-end px-8 pt-8 md:px-14 md:pt-8">
+              <div className="sticky top-4 z-[100000] flex justify-end px-8 pt-8 md:px-14 md:pt-8">
                 <button
                   className="flex h-8 w-8 items-center justify-center rounded-full bg-black/90 shadow-md dark:bg-white/90"
                   onClick={handleClose}
@@ -288,11 +292,10 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="relative z-10 flex h-48 w-80 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 dark:bg-neutral-900"
+        className="relative z-[1] flex h-48 w-80 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 dark:bg-neutral-900"
       >
-        <div className="absolute inset-x-0 top-0 z-30 h-full cursor-pointer bg-gradient-to-b from-black hover:scale-110 via-transparent to-transparent" />
-        {/*<div className="absolute inset-0 z-20 cursor-pointer bg-black/20 hover:bg-black/2" />*/}
-        <div className="relative z-40 p-8">
+        <div className="absolute inset-x-0 top-0 z-[3] h-full cursor-pointer bg-gradient-to-b from-black/60 via-transparent to-transparent" />
+        <div className="relative z-[4] p-8">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
             className="text-left font-sans text-sm font-medium text-white md:text-base"
@@ -310,7 +313,7 @@ export const Card = ({
           src={card.src}
           alt={card.title}
           fill
-          className="absolute inset-0 z-10 object-cover"
+          className="absolute inset-0 z-[2] object-cover"
         />
       </motion.button>
     </>
