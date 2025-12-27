@@ -283,5 +283,10 @@ body:has([data-state="open"]) {
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* Add this to your globals.css file (document 3) */
-
+/* Hide chat interface when project modal is open */
+[data-project-modal-open="true"] .chat-bottombar-container,
+[data-project-modal-open="true"] .helper-boost-container,
+[data-project-modal-open="true"] .chat-header-container {
+  display: none !important;
+  pointer-events: none !important;
+}
