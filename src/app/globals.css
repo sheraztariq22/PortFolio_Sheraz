@@ -286,7 +286,16 @@ body:has([data-state="open"]) {
 /* Hide chat interface when project modal is open */
 [data-project-modal-open="true"] .chat-bottombar-container,
 [data-project-modal-open="true"] .helper-boost-container,
-[data-project-modal-open="true"] .chat-header-container {
+[data-project-modal-open="true"] .chat-header-container,
+[data-project-modal-open="true"] .chat-content-container {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* Hide drawer overlays when project modal is open */
+[data-project-modal-open="true"] [data-vaul-drawer-wrapper],
+[data-project-modal-open="true"] .vaul-overlay,
+[data-project-modal-open="true"] [data-vaul-drawer] {
   display: none !important;
   pointer-events: none !important;
 }
