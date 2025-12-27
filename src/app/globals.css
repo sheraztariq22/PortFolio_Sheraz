@@ -286,16 +286,15 @@ body:has([data-state="open"]) {
 /* Hide chat interface when project modal is open */
 [data-project-modal-open="true"] .chat-bottombar-container,
 [data-project-modal-open="true"] .helper-boost-container,
-[data-project-modal-open="true"] .chat-header-container,
-[data-project-modal-open="true"] .chat-content-container {
+[data-project-modal-open="true"] .chat-header-container {
   display: none !important;
   pointer-events: none !important;
 }
 
 /* Hide drawer overlays when project modal is open */
-[data-project-modal-open="true"] [data-vaul-drawer-wrapper],
-[data-project-modal-open="true"] .vaul-overlay,
-[data-project-modal-open="true"] [data-vaul-drawer] {
+body[data-project-modal-open="true"] .fixed.inset-0:where([class*="z-100"]),
+body[data-project-modal-open="true"] [data-vaul-drawer-wrapper],
+body[data-project-modal-open="true"] [data-vaul-drawer] {
   display: none !important;
   pointer-events: none !important;
 }
