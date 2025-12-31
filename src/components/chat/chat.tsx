@@ -1,4 +1,3 @@
-// ...existing code...
 'use client';
 import { useChat } from '@ai-sdk/react';
 import { AnimatePresence, motion, Transition } from 'framer-motion';
@@ -115,31 +114,12 @@ const Chat = () => {
     onFinish: () => {
       setLoadingSubmit(false);
     },
-    onError: (error: unknown) => {
+    onError: (error) => {
       setLoadingSubmit(false);
-      console.error('Chat error (raw):', error);
-
-      // Safely extract message & cause from unknown error
-      const message = (() => {
-        if (!error) return '';
-        if (typeof error === 'string') return error;
-        if (error instanceof Error) return error.message;
-        try {
-          return (error as any)?.message ?? String(error);
-        } catch {
-          return String(error);
-        }
-      })();
-
-      const cause = (error && typeof error === 'object' && 'cause' in (error as any))
-        ? (error as any).cause
-        : undefined;
-      if (cause) console.error('Chat error cause:', cause);
-
-      const text = String(message || '').toLowerCase();
-
+      console.error('Chat error:', error.message, error.cause);
+      
       // Handle specific error types
-      if (text.includes('quota') || text.includes('exceeded') || text.includes('429')) {
+      if (error.message?.includes('quota') || error.message?.includes('exceeded') || error.message?.includes('429')) {
         // Show a friendly notification for quota issues
         toast.error('⚠️ API Quota Exhausted! Free Gemini API limit reached. Please contact Anuj directly or use preset questions. Thank you for understanding! 🙏', {
           duration: 6000, // Show for 6 seconds
@@ -151,10 +131,10 @@ const Chat = () => {
             fontWeight: '500',
           },
         });
-
+        
         // Set error message state for frontend display
         setErrorMessage('quota_exhausted');
-
+        
         // Try to add a chat bubble with the error message
         try {
           append({
@@ -164,13 +144,12 @@ const Chat = () => {
         } catch (appendError) {
           console.error('Failed to append error message:', appendError);
         }
-      } else if (text.includes('network')) {
+      } else if (error.message?.includes('network')) {
         toast.error('Network error. Please check your connection and try again.');
         setErrorMessage('Network error. Please check your connection and try again.');
       } else {
-        const display = message || 'An error occurred.';
-        toast.error(`Error: ${display}`);
-        setErrorMessage(`Error: ${display}`);
+        toast.error(`Error: ${error.message}`);
+        setErrorMessage(`Error: ${error.message}`);
       }
     },
     onToolCall: (tool) => {

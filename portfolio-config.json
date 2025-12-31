@@ -71,6 +71,38 @@
       "images": []
     },
     {
+      "title": "DocChat-MultiAgent",
+      "category": "Multi-Agent/AI",
+      "description": "A multi-agent RAG (Retrieval-Augmented Generation) system powered by Google Gemini, Docling, and LangGraph for intelligent document Q&A with built-in fact-checking and hallucination prevention.",
+      "techStack": ["CrewAI", "Google Gemini API", "Gradio", "Python", "LangGraph"],
+      "date": "December 2025 - December 2025",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/sheraztariq22/DocChat-MultiAgent"
+        }
+      ],
+      "images": []
+    },
+    {
+      "title": "Meal & Grocery Planner with CrewAI",
+      "category": "AI/NLP",
+      "description": "A production-ready intelligent meal planning and grocery shopping assistant powered by CrewAI, LangChain, and Google Gemini. This system uses a multi-agent architecture to coordinate specialized AI agents for meal research, shopping organization, budget analysis, and waste reduction.",
+      "techStack": ["Python", "CrewAI", "NLP", "LLMs", "Streamlit"],
+      "date": "December 2025 - December 2025",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/sheraztariq22/Meal-and-Grocery-"  
+        }
+       ],
+      "images": []
+    },
+    {
       "title": "AI Icebreaker Bot",
       "category": "AI/NLP",
       "description": "Executed the complete RAG (Retrieval-Augmented Generation) workflow from data extraction to intelligent generation. Utilized LangChain and LlamaIndex for efficient processing and retrieval, creating an engaging icebreaker conversation bot. Implemented context-aware responses for natural conversations.",
@@ -134,6 +166,7 @@
        ],
       "images": []
     }
+    
   ],
   "social": {
     "linkedin": "https://www.linkedin.com/in/sheraz-tariq-12434a239/",
