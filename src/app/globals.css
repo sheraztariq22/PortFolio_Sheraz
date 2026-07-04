@@ -6,6 +6,8 @@
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
+  --brand: oklch(0.54 0.2 277);
+  --brand-foreground: oklch(0.985 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
@@ -40,6 +42,8 @@
 .dark {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
+  --brand: oklch(0.68 0.16 277);
+  --brand-foreground: oklch(0.141 0.005 285.823);
   --card: oklch(0.21 0.006 285.885);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.21 0.006 285.885);
@@ -81,220 +85,65 @@
   }
 }
 
-.custom-scrollbar {
-  /* For Firefox */
-  scrollbar-width: thin;
-  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+/* ------------------------------------------------------------------ */
+/*  Base polish                                                        */
+/* ------------------------------------------------------------------ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* offset for the sticky navbar on anchor jumps */
 }
 
-/* For Chrome, Edge, and Safari */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+::selection {
+  background-color: color-mix(in oklab, var(--brand) 30%, transparent);
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: rgba(155, 155, 155, 0.5);
-  border-radius: 10px;
-  border: transparent;
-}
-
-/* Hide scrollbar when not in use but keep functionality */
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(155, 155, 155, 0.7);
-}
-
-/* Ensure code blocks can scroll horizontally */
+/* Code blocks scroll horizontally instead of breaking the layout */
 pre {
   white-space: pre;
   word-wrap: normal;
   overflow-x: auto;
 }
 
-/* Emergency fix for project overlapping */
-* {
-  box-sizing: border-box;
+/* ------------------------------------------------------------------ */
+/*  Thin custom scrollbar                                              */
+/* ------------------------------------------------------------------ */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.45);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(155, 155, 155, 0.7);
 }
 
-/* Fix dialog/modal z-index */
-[role="dialog"] {
-  z-index: 9999 !important;
+/* ------------------------------------------------------------------ */
+/*  Subtle dotted grid background utility (hero)                       */
+/* ------------------------------------------------------------------ */
+.bg-dot-grid {
+  background-image: radial-gradient(
+    color-mix(in oklab, var(--foreground) 14%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
 }
 
-[data-state="open"] {
-  z-index: 9999 !important;
+/* Radial mask so decorative backgrounds fade toward the edges */
+.mask-radial-faded {
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 72%);
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 72%);
 }
 
-/* Fix Radix UI Dialog specifically */
-.radix-dialog-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 9998;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.radix-dialog-content {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  max-width: 90vw;
-  max-height: 90vh;
-  overflow-y: auto;
-  background: white;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-}
-
-/* Dark mode fix */
-.dark .radix-dialog-content {
-  background: oklch(0.21 0.006 285.885);
-}
-
-/* Ensure proper stacking context for carousel */
-.carousel-container {
-  position: relative;
-  z-index: 1;
-}
-
-/* Fix for modal overlay */
-[data-vaul-drawer-wrapper] {
-  z-index: 9998 !important;
-}
-
-[data-vaul-drawer] {
-  z-index: 9999 !important;
-}
-
-/* Fix for Vaul drawer overlay */
-.vaul-overlay {
-  position: fixed !important;
-  inset: 0 !important;
-  background-color: rgba(0, 0, 0, 0.5) !important;
-  z-index: 9998 !important;
-}
-
-/* Fix for Vaul drawer content */
-.vaul-drawer {
-  position: fixed !important;
-  z-index: 9999 !important;
-}
-
-/* Ensure card modals are on top */
-.card-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9998;
-  backdrop-filter: blur(4px);
-}
-
-.card-modal-content {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  max-width: 90vw;
-  max-height: 90vh;
-  overflow-y: auto;
-  background: white;
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Dark mode for modal */
-.dark .card-modal-content {
-  background: oklch(0.21 0.006 285.885);
-  color: oklch(0.985 0 0);
-}
-
-/* Prevent body scroll when modal is open */
-body:has([data-state="open"]) {
+/* Prevent body scroll when the AI chat overlay is open */
+body:has([data-ai-overlay="open"]) {
   overflow: hidden;
-}
-
-/* Fix for framer-motion modals */
-[data-framer-motion-modal] {
-  z-index: 9999 !important;
-  position: fixed !important;
-}
-
-/* Ensure carousel items don't overlap modal */
-.carousel-item {
-  position: relative;
-  z-index: 1;
-}
-
-.carousel-item.active {
-  z-index: 2;
-}
-
-/* Fix for expanded card state */
-[data-expanded="true"] {
-  z-index: 9999 !important;
-  position: fixed !important;
-}
-
-/* Additional fixes for Radix UI components */
-[data-radix-portal] {
-  z-index: 9999 !important;
-}
-
-/* Smooth scrolling for modal content */
-.card-modal-content {
-  scroll-behavior: smooth;
-}
-
-.card-modal-content::-webkit-scrollbar {
-  width: 8px;
-}
-
-.card-modal-content::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-}
-
-.card-modal-content::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-}
-
-.card-modal-content::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-/* Dark mode scrollbar */
-.dark .card-modal-content::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.dark .card-modal-content::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.dark .card-modal-content::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-/* Hide chat interface when project modal is open */
-[data-project-modal-open="true"] .chat-bottombar-container,
-[data-project-modal-open="true"] .helper-boost-container,
-[data-project-modal-open="true"] .chat-header-container {
-  display: none !important;
-  pointer-events: none !important;
-}
-
-/* Hide drawer overlays when project modal is open */
-body[data-project-modal-open="true"] .fixed.inset-0:where([class*="z-100"]),
-body[data-project-modal-open="true"] [data-vaul-drawer-wrapper],
-body[data-project-modal-open="true"] [data-vaul-drawer] {
-  display: none !important;
-  pointer-events: none !important;
 }

@@ -3,7 +3,9 @@ export interface PersonalInfo {
   age: number;
   location: string;
   title: string;
+  tagline: string;
   email: string;
+  phone?: string;
   handle: string;
   bio: string;
   avatar: string;
@@ -18,6 +20,13 @@ export interface Education {
     cgpa: string;
     graduationDate: string;
   };
+  previous?: {
+    degree: string;
+    institution: string;
+    duration: string;
+    percentage?: string;
+    completionDate?: string;
+  };
   achievements: string[];
 }
 
@@ -31,13 +40,12 @@ export interface Experience {
 }
 
 export interface Skills {
-  programming: string[];
-  ml_ai: string[];
-  web_development: string[];
-  databases: string[];
-  devops_cloud: string[];
-  iot_hardware: string[];
-  soft_skills: string[];
+  languages: string[];
+  genai_agents: string[];
+  ai_ml: string[];
+  backend_web: string[];
+  cloud_data: string[];
+  enterprise_crm: string[];
 }
 
 export interface ProjectLink {
@@ -69,6 +77,8 @@ export interface Social {
   github: string;
   twitter: string;
   leetcode: string;
+  liveProduct?: string;
+  portfolio?: string;
 }
 
 export interface Internship {
@@ -127,6 +137,7 @@ export interface Meta {
 export interface PortfolioConfig {
   personal: PersonalInfo;
   education: Education;
+  certifications?: string[];
   experience: Experience[];
   skills: Skills;
   projects: Project[];
@@ -158,6 +169,8 @@ export interface ContactInfo {
 
 export interface ProfileInfo {
   name: string;
+  title: string;
+  tagline: string;
   age: string;
   location: string;
   description: string;

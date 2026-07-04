@@ -85,7 +85,11 @@ export function Presentation() {
               {profile.name}
             </h1>
 
-            <div className="mt-1 flex flex-col gap-1 md:flex-row md:items-center md:gap-4">
+            <p className="text-primary mt-2 text-sm font-medium md:text-base">
+              {profile.title}
+            </p>
+
+            <div className="mt-2 flex flex-col gap-1 md:flex-row md:items-center md:gap-4">
               <p className="text-muted-foreground">{profile.age}</p>
               <div className="bg-border hidden h-1.5 w-1.5 rounded-full md:block" />
               <p className="text-muted-foreground">{profile.location}</p>
@@ -96,7 +100,16 @@ export function Presentation() {
             initial="hidden"
             animate="visible"
             variants={paragraphAnimation}
-            className="text-foreground mt-6 whitespace-pre-line leading-relaxed"
+            className="text-muted-foreground mt-4 border-l-2 border-primary/40 pl-3 text-sm italic leading-relaxed md:text-base"
+          >
+            {profile.tagline}
+          </motion.p>
+
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            variants={paragraphAnimation}
+            className="text-foreground mt-4 whitespace-pre-line leading-relaxed"
           >
             {profile.description}
           </motion.p>
@@ -109,11 +122,11 @@ export function Presentation() {
             className="mt-4 flex flex-wrap gap-2"
           >
             {[
-              'AI Engineer',
-              'Python Developer',
-              'IoT Specialist',
-              'ML Engineer',
-              'Freelancer',
+              'Generative AI',
+              'Agentic AI',
+              'RAG Systems',
+              'LLM Engineering',
+              'Full Stack AI',
             ].map((tag) => (
               <span
                 key={tag}

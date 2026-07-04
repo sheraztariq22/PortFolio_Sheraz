@@ -49,10 +49,7 @@ const Avatar = dynamic<AvatarProps>(
         <div
           className={`flex items-center justify-center rounded-full transition-all duration-300 ${hasActiveTool ? 'h-20 w-20' : 'h-28 w-28'}`}
         >
-          <div
-            className="relative cursor-pointer"
-            onClick={() => (window.location.href = '/')}
-          >
+          <div className="relative">
             <img
               src="/avatar.png"
               alt="Avatar"
@@ -121,7 +118,7 @@ const Chat = () => {
       // Handle specific error types
       if (error.message?.includes('quota') || error.message?.includes('exceeded') || error.message?.includes('429')) {
         // Show a friendly notification for quota issues
-        toast.error('⚠️ API Quota Exhausted! Free Gemini API limit reached. Please contact Anuj directly or use preset questions. Thank you for understanding! 🙏', {
+        toast.error('⚠️ API Quota Exhausted! Free Gemini API limit reached. Please contact Sheraz directly or use preset questions. Thank you for understanding! 🙏', {
           duration: 6000, // Show for 6 seconds
           style: {
             background: '#fef3c7',
@@ -139,7 +136,7 @@ const Chat = () => {
         try {
           append({
             role: 'assistant',
-            content: '⚠️ **API Quota Exhausted**\n\nFree Gemini API limit reached. Please contact Anuj directly or use preset questions below.',
+            content: '⚠️ **API Quota Exhausted**\n\nFree Gemini API limit reached. Please contact Sheraz directly or use preset questions below.',
           });
         } catch (appendError) {
           console.error('Failed to append error message:', appendError);
@@ -282,15 +279,9 @@ const Chat = () => {
   return (
     <div className="relative h-screen overflow-hidden" data-chat-page>
       {/* Fixed Avatar Header with Gradient */}
-      <div
-        className="chat-header-container fixed top-0 right-0 left-0 z-50"
-        style={{
-          background:
-            'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)',
-        }}
-      >
+      <div className="chat-header-container from-background via-background/95 fixed top-0 right-0 left-0 z-40 bg-gradient-to-b to-transparent">
         <div
-          className={`transition-all duration-300 ease-in-out ${hasActiveTool ? 'pt-6 pb-0' : 'py-6'}`}
+          className={`transition-all duration-300 ease-in-out ${hasActiveTool ? 'pt-16 pb-0' : 'pt-16 pb-6'}`}
         >
           <div className="flex justify-center">
             <ClientOnly>
@@ -451,7 +442,7 @@ const Chat = () => {
         </div>
 
         {/* Fixed Bottom Bar */}
-        <div className="chat-bottombar-container sticky bottom-0 bg-white px-2 pt-3 md:px-0 md:pb-4">
+        <div className="chat-bottombar-container from-background via-background sticky bottom-0 bg-gradient-to-t to-transparent px-2 pt-3 md:px-0 md:pb-4">
           <div className="relative flex flex-col items-center gap-3">
             <div className="helper-boost-container">
               <HelperBoost 

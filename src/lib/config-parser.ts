@@ -10,6 +10,7 @@ class ConfigParser {
   // Generate system prompt for AI chatbot
   generateSystemPrompt(): string {
     const { personal, education, experience, skills, projects, personality, internship } = this.config;
+    const certifications = this.config.certifications || [];
     
     return `
 # Interview Scenario: You are ${personal.name}
@@ -47,12 +48,13 @@ CRITICAL: You must use tools to provide comprehensive information, not just text
 - Achievements: ${education.achievements.join(', ')}
 
 ### Technical Expertise
-- Programming Languages: ${skills.programming.join(', ')}
-- ML/AI Technologies: ${skills.ml_ai.join(', ')}
-- Web Development: ${skills.web_development.join(', ')}
-- Database Systems: ${skills.databases.join(', ')}
-- DevOps & Cloud: ${skills.devops_cloud.join(', ')}
-- IoT & Hardware: ${skills.iot_hardware.join(', ')}
+- Languages: ${skills.languages.join(', ')}
+- Generative AI & Agents: ${skills.genai_agents.join(', ')}
+- AI/ML: ${skills.ai_ml.join(', ')}
+- Backend & Web: ${skills.backend_web.join(', ')}
+- Cloud & Data: ${skills.cloud_data.join(', ')}
+- Enterprise/CRM: ${skills.enterprise_crm.join(', ')}
+- Certifications: ${certifications.join(', ')}
 
 ### Professional Experience
 ${experience.map(exp => `- ${exp.position} at ${exp.company} (${exp.duration}): ${exp.description}`).join('\n')}
@@ -98,6 +100,7 @@ REMEMBER: You are NOT an AI assistant - you are ${personal.name} being interview
       socials: [
         { name: 'LinkedIn', url: social.linkedin },
         { name: 'GitHub', url: social.github },
+        { name: 'Live Product · ngedu.ai', url: social.liveProduct || '' },
         { name: 'Twitter', url: social.twitter },
         { name: 'LeetCode', url: social.leetcode },
       ].filter(social => social.url !== '')
@@ -110,6 +113,8 @@ REMEMBER: You are NOT an AI assistant - you are ${personal.name} being interview
     
     return {
       name: personal.name,
+      title: personal.title,
+      tagline: personal.tagline,
       age: `${personal.age} years old`,
       location: personal.location,
       description: personal.bio,
@@ -124,38 +129,33 @@ REMEMBER: You are NOT an AI assistant - you are ${personal.name} being interview
     
     return [
       {
-        category: 'Programming Languages',
-        skills: skills.programming,
+        category: 'Languages',
+        skills: skills.languages,
         color: 'bg-blue-50 text-blue-600 border border-blue-200'
       },
       {
-        category: 'ML/AI Technologies',
-        skills: skills.ml_ai,
+        category: 'Generative AI & Agents',
+        skills: skills.genai_agents,
         color: 'bg-purple-50 text-purple-600 border border-purple-200'
       },
       {
-        category: 'Web Development',
-        skills: skills.web_development,
+        category: 'AI/ML',
+        skills: skills.ai_ml,
+        color: 'bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200'
+      },
+      {
+        category: 'Backend & Web',
+        skills: skills.backend_web,
         color: 'bg-green-50 text-green-600 border border-green-200'
       },
       {
-        category: 'Databases',
-        skills: skills.databases,
-        color: 'bg-orange-50 text-orange-600 border border-orange-200'
-      },
-      {
-        category: 'DevOps & Cloud',
-        skills: skills.devops_cloud,
+        category: 'Cloud & Data',
+        skills: skills.cloud_data,
         color: 'bg-emerald-50 text-emerald-600 border border-emerald-200'
       },
       {
-        category: 'IoT & Hardware',
-        skills: skills.iot_hardware,
-        color: 'bg-indigo-50 text-indigo-600 border border-indigo-200'
-      },
-      {
-        category: 'Soft Skills',
-        skills: skills.soft_skills,
+        category: 'Enterprise/CRM',
+        skills: skills.enterprise_crm,
         color: 'bg-amber-50 text-amber-600 border border-amber-200'
       }
     ].filter(category => category.skills.length > 0);

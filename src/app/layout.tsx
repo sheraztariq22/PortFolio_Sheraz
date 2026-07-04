@@ -1,54 +1,60 @@
 import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
-// Load Inter font for non-Apple devices
-const inter = Inter({ 
+// Primary UI typeface
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans",
+  display: "swap",
+});
+
+// Monospace for numeric/label accents (Vercel/Linear style)
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sheraztariq.com"),
   title: {
-    default: "Sheraz Tariq - Full-stack Python Developer & AI Engineer | Professional Portfolio",
-    template: "%s | Sheraz Tariq Portfolio"
+    default: "Sheraz Tariq - AI/ML Engineer | Generative AI, Agentic AI & RAG",
+    template: "%s | Sheraz Tariq"
   },
-  description: "Professional portfolio of Sheraz Tariq - Full-stack Python Developer & AI Engineer. SIH 2025 Finalist showcasing 25+ automation projects, IoT systems, and AI-powered solutions. Available for internships.",
+  description: "AI/ML Engineer specializing in Generative AI, agentic (multi-agent) systems, and production RAG. I take LLMs from prototype to scalable, enterprise-grade products — and build the full-stack apps and backends that power them.",
   keywords: [
     "Sheraz Tariq",
-    "Full-stack Developer", 
-    "Python Developer",
     "AI Engineer",
-    "Portfolio",
-    "Software Developer",
-    "Machine Learning",
-    "IoT Developer",
-    "Web Development",
-    "Next.js",
-    "React",
-    "FastAPI",
-    "Django",
-    "Automation",
+    "AI/ML Engineer",
+    "Machine Learning Engineer",
+    "Generative AI",
+    "Agentic AI",
+    "Multi-Agent Systems",
+    "RAG",
+    "Retrieval-Augmented Generation",
+    "LLM Engineer",
     "LangChain",
-    "Smart India Hackathon",
-    "Freelancer",
-    "AI Chatbot",
-    "Professional Portfolio",
-    "Developer Portfolio",
-    "Tech Portfolio",
-    "Internship",
-    "Python Automation",
-    "Web Scraping",
-    "API Development"
+    "LangGraph",
+    "CrewAI",
+    "AWS Bedrock",
+    "Full Stack AI Developer",
+    "React",
+    "TypeScript",
+    "FastAPI",
+    "Supabase",
+    "pgvector",
+    "ngedu.ai",
+    "Professional Portfolio"
   ],
   authors: [
     {
       name: "Sheraz Tariq",
-      url: "url",
+      url: "https://sheraztariq.com/",
     },
   ],
   creator: "Sheraz Tariq",
@@ -67,29 +73,29 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://portfolio.anujjainbatu.tech/",
-    title: "Sheraz Tariq - Full-stack Python Developer & AI Engineer | Professional Portfolio",
-    description: "Professional portfolio showcasing AI-powered projects, IoT systems, and full-stack development. SIH 2025 Finalist with 25+ automation projects. Available for internships.",
+    url: "https://sheraztariq.com/",
+    title: "Sheraz Tariq - AI/ML Engineer | Generative AI, Agentic AI & RAG",
+    description: "AI/ML Engineer specializing in Generative AI, multi-agent systems, and production RAG. Architect of ngedu.ai — an AI-powered K–12 learning platform.",
     siteName: "Sheraz Tariq Portfolio",
     images: [
       {
-        url: "https://portfolio.anujjainbatu.tech/portfolio.png",
+        url: "/portfolio.png",
         width: 1200,
         height: 630,
-        alt: "Sheraz Tariq - Professional Portfolio with AI Chatbot",
+        alt: "Sheraz Tariq - AI/ML Engineer Portfolio",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sheraz Tariq - Full-stack Python Developer & AI Engineer",
-    description: "Professional portfolio showcasing AI projects, IoT systems, and automation solutions. SIH 2025 Finalist available for internships.",
-    creator: "@anujainbatu",
-    site: "@anujainbatu",
+    title: "Sheraz Tariq - AI/ML Engineer | Generative AI, Agentic AI & RAG",
+    description: "AI/ML Engineer specializing in Generative AI, multi-agent systems, and production RAG. Architect of ngedu.ai.",
+    creator: "@SherazT17522925",
+    site: "@SherazT17522925",
     images: [{
-      url: "https://portfolio.anujjainbatu.tech/portfolio.png",
-      alt: "Sheraz Tariq Professional Portfolio"
+      url: "/portfolio.png",
+      alt: "Sheraz Tariq - AI/ML Engineer Portfolio"
     }],
   },
   icons: {
@@ -104,7 +110,7 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   alternates: {
-    canonical: "https://portfolio.anujjainbatu.tech/",
+    canonical: "https://sheraztariq.com/",
   },
   category: "technology",
   classification: "Portfolio Website",
@@ -119,11 +125,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="canonical" href="https://portfolio.anujjainbatu.tech/" />
+        <link rel="canonical" href="https://sheraztariq.com/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -131,32 +137,35 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Sheraz Tariq",
-              "jobTitle": "Full-stack Python Developer & AI Engineer",
-              "url": "https://portfolio.anujjainbatu.tech/",
-              "image": "https://portfolio.anujjainbatu.tech/profile.jpeg",
+              "jobTitle": "AI/ML Engineer — Generative AI, Agentic AI & RAG",
+              "url": "https://sheraztariq.com/",
+              "image": "https://sheraztariq.com/profile.jpeg",
               "sameAs": [
-                  "https://www.linkedin.com/in/sheraz-tariq-12434a239/",
+                  "https://linkedin.com/in/sheraz-tariq-12434a239",
                   "https://github.com/sheraztariq22",
                   "https://x.com/SherazT17522925",
+                  "https://www.ngedu.ai",
               ],
               "worksFor": {
                 "@type": "Organization",
-                "name": "Freelance"
+                "name": "SkilliHire"
               },
               "alumniOf": {
                 "@type": "Organization",
-                "name": "SATI"
+                "name": "FAST - National University of Computer and Emerging Sciences (NUCES)"
               },
               "knowsAbout": [
-                "Python Development",
-                "AI Engineering",
+                "Generative AI",
+                "Agentic AI",
+                "Multi-Agent Systems",
+                "Retrieval-Augmented Generation",
+                "Large Language Models",
                 "Machine Learning",
-                "IoT Systems",
-                "Web Development",
-                "Automation",
-                "Full Stack Development"
+                "Deep Learning",
+                "NLP",
+                "Full Stack AI Development"
               ],
-              "description": "Full-stack Python Developer & AI Engineer with expertise in building AI-powered solutions, IoT systems, and automation tools. SIH 2025 Finalist with 25+ delivered projects."
+              "description": "AI/ML Engineer specializing in Generative AI, agentic (multi-agent) systems, and production RAG. Architect of ngedu.ai, an AI-powered K–12 learning platform."
             })
           }}
         />
@@ -165,16 +174,16 @@ export default function RootLayout({
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           inter.variable,
+          jetbrainsMono.variable,
         )}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          enableSystem={false}
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
         >
-          <main className="flex min-h-screen flex-col">
-            {children}
-          </main>
+          {children}
           <Toaster />
         </ThemeProvider>
         <Analytics />

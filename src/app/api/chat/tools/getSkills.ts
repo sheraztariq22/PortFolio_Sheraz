@@ -11,13 +11,14 @@ export const getSkills = tool({
     
     return {
       technicalSkills: {
-        programming: config.skills.programming,
-        machineLearning: config.skills.ml_ai,
-        webDevelopment: config.skills.web_development,
-        databases: config.skills.databases,
-        devOpsCloud: config.skills.devops_cloud,
-        iotHardware: config.skills.iot_hardware
+        languages: config.skills.languages,
+        generativeAiAndAgents: config.skills.genai_agents,
+        aiMl: config.skills.ai_ml,
+        backendAndWeb: config.skills.backend_web,
+        cloudAndData: config.skills.cloud_data,
+        enterpriseCrm: config.skills.enterprise_crm
       },
+      certifications: config.certifications || [],
       education: {
         degree: config.education.current.degree,
         institution: config.education.current.institution,

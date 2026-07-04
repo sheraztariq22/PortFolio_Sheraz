@@ -8,9 +8,12 @@ import {
   Mail,
   MessageSquare,
   Briefcase,
+  FileText,
+  Github,
+  ExternalLink,
 } from 'lucide-react';
 
-import { presetReplies } from '@/lib/config-loader';
+import { presetReplies, getConfig } from '@/lib/config-loader';
 
 interface ChatLandingProps {
   submitQuery: (query: string) => void;
@@ -46,6 +49,27 @@ const ChatLanding: React.FC<ChatLandingProps> = ({
     {
       icon: <Mail className="h-4 w-4" />,
       text: 'How can I reach you?',
+    },
+  ];
+
+  const config = getConfig();
+
+  // External CTA links: resume, GitHub, and the live product
+  const ctaLinks = [
+    {
+      icon: <FileText className="h-4 w-4" />,
+      label: 'Resume',
+      url: config.resume.downloadUrl,
+    },
+    {
+      icon: <Github className="h-4 w-4" />,
+      label: 'GitHub',
+      url: config.social.github,
+    },
+    {
+      icon: <ExternalLink className="h-4 w-4" />,
+      label: 'ngedu.ai (Live)',
+      url: config.social.liveProduct || 'https://www.ngedu.ai',
     },
   ];
 
@@ -96,15 +120,35 @@ const ChatLanding: React.FC<ChatLandingProps> = ({
     >
       {/* Welcome message */}
       <motion.div
-        className="mb-8 text-center"
+        className="mb-6 text-center"
         variants={itemVariants}
       >
         <h2 className="mb-3 text-2xl font-semibold">
-          I'm Sheraz's digital twin
+          I'm Sheraz's AI twin
         </h2>
         <p className="text-muted-foreground mx-auto max-w-md">
-          Begin your interview with my digital twin.
+          AI/ML Engineer building Generative AI, agentic (multi-agent) systems,
+          and production RAG. Ask me anything — or explore the links below.
         </p>
+      </motion.div>
+
+      {/* External CTAs: resume, GitHub, live product */}
+      <motion.div
+        className="mb-8 flex flex-wrap items-center justify-center gap-2"
+        variants={itemVariants}
+      >
+        {ctaLinks.map((cta) => (
+          <a
+            key={cta.label}
+            href={cta.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-border bg-background/80 hover:bg-accent flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors"
+          >
+            {cta.icon}
+            {cta.label}
+          </a>
+        ))}
       </motion.div>
 
       {/* Available for Opportunities Button */}

@@ -4,55 +4,51 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { easeOut } from 'framer-motion';
-import { Code, Cpu, PenTool, Users, Database, Cloud, Microchip, Brain } from 'lucide-react';
+import { Code, Cpu, Cloud, Brain, Bot, Building2, Award } from 'lucide-react';
 import { getConfig } from '@/lib/config-loader';
 
 const Skills = () => {
   // Get skills from configuration
   const config = getConfig();
   
+  const certifications = config.certifications || [];
+
   // Transform skills data with icons
   const skillsData = [
     {
-      category: 'Programming Languages',
+      category: 'Languages',
       icon: <Code className="h-5 w-5" />,
-      skills: config.skills.programming,
+      skills: config.skills.languages,
       color: 'bg-blue-50 text-blue-600 border border-blue-200',
     },
     {
-      category: 'ML/AI Technologies',
-      icon: <Brain className="h-5 w-5" />,
-      skills: config.skills.ml_ai,
+      category: 'Generative AI & Agents',
+      icon: <Bot className="h-5 w-5" />,
+      skills: config.skills.genai_agents,
       color: 'bg-purple-50 text-purple-600 border border-purple-200',
     },
     {
-      category: 'Web Development',
+      category: 'AI/ML',
+      icon: <Brain className="h-5 w-5" />,
+      skills: config.skills.ai_ml,
+      color: 'bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200',
+    },
+    {
+      category: 'Backend & Web',
       icon: <Cpu className="h-5 w-5" />,
-      skills: config.skills.web_development,
+      skills: config.skills.backend_web,
       color: 'bg-green-50 text-green-600 border border-green-200',
     },
     {
-      category: 'Databases',
-      icon: <Database className="h-5 w-5" />,
-      skills: config.skills.databases,
-      color: 'bg-orange-50 text-orange-600 border border-orange-200',
-    },
-    {
-      category: 'DevOps & Cloud',
+      category: 'Cloud & Data',
       icon: <Cloud className="h-5 w-5" />,
-      skills: config.skills.devops_cloud,
+      skills: config.skills.cloud_data,
       color: 'bg-emerald-50 text-emerald-600 border border-emerald-200',
     },
     {
-      category: 'IoT & Hardware',
-      icon: <Microchip className="h-5 w-5" />,
-      skills: config.skills.iot_hardware,
-      color: 'bg-indigo-50 text-indigo-600 border border-indigo-200',
-    },
-    {
-      category: 'Soft Skills',
-      icon: <Users className="h-5 w-5" />,
-      skills: config.skills.soft_skills,
+      category: 'Enterprise/CRM',
+      icon: <Building2 className="h-5 w-5" />,
+      skills: config.skills.enterprise_crm,
       color: 'bg-amber-50 text-amber-600 border border-amber-200',
     },
   ].filter(category => category.skills && category.skills.length > 0);
@@ -143,6 +139,36 @@ const Skills = () => {
                 </motion.div>
               </motion.div>
             ))}
+
+            {certifications.length > 0 && (
+              <motion.div className="space-y-3 px-0" variants={itemVariants}>
+                <div className="flex items-center gap-2">
+                  <Award className="h-5 w-5" />
+                  <h3 className="text-accent-foreground text-base sm:text-lg font-semibold">
+                    Certifications
+                  </h3>
+                </div>
+
+                <motion.div
+                  className="flex flex-wrap gap-1.5 sm:gap-2"
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {certifications.map((cert, idx) => (
+                    <motion.div
+                      key={idx}
+                      variants={badgeVariants}
+                      whileHover={{ scale: 1.04, transition: { duration: 0.2 } }}
+                    >
+                      <Badge className="border px-2 py-1 sm:px-3 sm:py-1.5 font-normal text-xs sm:text-sm">
+                        {cert}
+                      </Badge>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </motion.div>
+            )}
           </motion.div>
         </CardContent>
       </Card>

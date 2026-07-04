@@ -16,6 +16,7 @@ try {
       age: 0,
       location: 'Unknown',
       title: 'Error Loading Config',
+      tagline: '',
       email: 'error@example.com',
       handle: '@error',
       bio: 'Configuration file could not be loaded',
@@ -34,13 +35,12 @@ try {
     },
     experience: [],
     skills: {
-      programming: [],
-      ml_ai: [],
-      web_development: [],
-      databases: [],
-      devops_cloud: [],
-      iot_hardware: [],
-      soft_skills: []
+      languages: [],
+      genai_agents: [],
+      ai_ml: [],
+      backend_web: [],
+      cloud_data: [],
+      enterprise_crm: []
     },
     projects: [],
     social: {
