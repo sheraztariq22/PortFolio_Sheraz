@@ -8,6 +8,7 @@ import { getPresentation } from './tools/getPresentation';
 import { getProjects } from './tools/getProjects';
 import { getResume } from './tools/getResume';
 import { getSkills } from './tools/getSkills';
+import { getClientIp, rateLimit } from '@/lib/rate-limit';
 
 export const maxDuration = 30;
 
@@ -31,6 +32,16 @@ function errorHandler(error: unknown) {
 
 export async function POST(req: Request) {
   try {
+    // Throttle to control Gemini spend: 20 requests per minute per IP.
+    const ip = getClientIp(req);
+    const rl = rateLimit(`chat:${ip}`, 20, 60_000);
+    if (!rl.ok) {
+      return new Response(
+        'You are sending messages too quickly. Please wait a moment and try again.',
+        { status: 429 },
+      );
+    }
+
     const { messages } = await req.json();
 
     // Check if API key is available (never log the key itself)
