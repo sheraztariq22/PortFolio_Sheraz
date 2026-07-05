@@ -66,7 +66,7 @@ const ProjectContent = ({ project }: { project: { title: string } }) => {
               <div className="flex flex-wrap gap-2">
                 {projectData.metrics.map((metric, index) => (
                   <span key={index} className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">
-                    {metric}
+                    <span className="font-medium">{metric.label}:</span> {metric.value}
                   </span>
                 ))}
               </div>

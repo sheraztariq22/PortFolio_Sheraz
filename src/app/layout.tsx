@@ -1,20 +1,20 @@
 import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
-// Primary UI typeface
-const inter = Inter({
+// Primary UI typeface — precise, engineered grotesk (Vercel's Geist)
+const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
 
-// Monospace for numeric/label accents (Vercel/Linear style)
-const jetbrainsMono = JetBrains_Mono({
+// Monospace for numeric/label accents
+const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   display: "swap",
@@ -173,8 +173,8 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          inter.variable,
-          jetbrainsMono.variable,
+          geistSans.variable,
+          geistMono.variable,
         )}
       >
         <ThemeProvider

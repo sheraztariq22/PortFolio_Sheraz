@@ -46,6 +46,10 @@ const config: Config = {
           DEFAULT: "var(--brand)",
           foreground: "var(--brand-foreground)",
         },
+        accent2: {
+          DEFAULT: "var(--accent-2)",
+          foreground: "var(--accent-2-foreground)",
+        },
         chart: {
           "1": "var(--chart-1)",
           "2": "var(--chart-2)",
@@ -83,9 +87,14 @@ const config: Config = {
           "0%, 100%": { opacity: "0.4" },
           "50%": { opacity: "0.7" },
         },
+        "pulse-node": {
+          "0%, 100%": { opacity: "0.55" },
+          "50%": { opacity: "1" },
+        },
       },
       animation: {
         "fade-in-up": "fade-in-up 0.6s cubic-bezier(0.16,1,0.3,1) both",
+        "pulse-node": "pulse-node 2.4s ease-in-out infinite",
       },
     },
   },

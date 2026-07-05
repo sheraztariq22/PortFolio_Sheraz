@@ -3,12 +3,13 @@
     "name": "Sheraz Tariq",
     "age": 25,
     "location": "Pakistan · Remote (international teams)",
-    "title": "AI/ML Engineer · Generative AI, Agentic AI & RAG · Full Stack AI Developer",
-    "tagline": "I turn LLMs from chat experiments into scalable, enterprise-grade AI products — the robust backends that power them and the full-stack apps that make them accessible.",
+    "title": "AI/ML Engineer — Generative AI · Agentic Systems · Production RAG",
+    "tagline": "I take LLMs from prototype to production — architecting the agent systems, RAG pipelines, and full-stack apps that put them in front of real users.",
+    "proofPoint": "Architected ngedu.ai — a live Year 0–12 AI learning platform running 4 coordinated LLM agents, real-time voice tutoring, and a production RAG pipeline.",
     "email": "sheraztariq2978@gmail.com",
     "phone": "+92 340 5437523",
     "handle": "@sheraztariq",
-    "bio": "AI/ML Engineer with strong experience building intelligent systems that solve real-world problems — machine learning, deep learning, NLP, and computer vision — with a current focus on Generative AI, multi-agent systems, and retrieval-augmented generation (RAG). I architect production LLM pipelines and the full-stack applications on top of them, taking models from prototype to scalable, enterprise-grade product.",
+    "bio": "AI/ML engineer focused on moving LLMs from prototype to production. I architect the multi-agent systems, RAG pipelines, and full-stack applications behind ngedu.ai — a live platform delivering the Australian Curriculum (Year 0–12) — and have brought generative AI into enterprise CRM. Grounded in machine learning, deep learning, NLP, and computer vision, with a current focus on generative AI, agentic systems, and retrieval-augmented generation.",
     "avatar": "/profile.jpeg",
     "fallbackAvatar": "https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3"
   },
@@ -31,7 +32,7 @@
       "Architected ngedu.ai — an AI-powered homeschooling platform delivering the Australian Curriculum (Year 0–12)",
       "Designed multi-agent LLM systems (tutor, classroom, daily coach, parent advisor) and real-time voice tutoring",
       "Built production RAG pipelines and 70+ serverless edge functions powering enterprise-grade AI features",
-      "Integrated Generative AI into enterprise CRM platforms (SugarCRM, SuiteCRM) via a LangGraph multi-agent assistant"
+      "Integrated generative AI into enterprise CRM platforms (SugarCRM, SuiteCRM) via a LangGraph multi-agent assistant"
     ]
   },
   "certifications": [
@@ -47,7 +48,7 @@
       "position": "Lead Full Stack AI Engineer",
       "type": "Full-time",
       "duration": "Feb 2026 - Present · Remote, Australia",
-      "description": "Architected and lead NextGen Schooling (ngedu.ai), an AI-powered homeschooling platform delivering the Australian Curriculum from Year 0 to Year 12. Designed multiple coordinated LLM agents — an AI tutor, classroom agent, daily coach, and parent advisor — plus real-time voice tutoring built on AWS Nova Sonic streaming (with barge-in) and Amazon Polly TTS. Built the full-stack product with React, TypeScript, Tailwind, and Supabase (Postgres/pgvector), including 70+ serverless edge functions, Stripe subscription billing, and role-based portals. Own production concerns end to end: AWS (Bedrock, S3, Lambda), performance budgets, SEO/GEO, and end-to-end and load testing.",
+      "description": "Architect and engineering lead for ngedu.ai, a live platform delivering the Australian Curriculum from Year 0 to Year 12. Split teaching into a multi-agent system — AI tutor, classroom agent, daily coach, and parent advisor — so each job is owned by a dedicated agent instead of one overloaded prompt. Built real-time voice tutoring on AWS Nova Sonic streaming with barge-in, so students can interrupt mid-sentence, backed by Amazon Polly TTS. Shipped the full product — React/TypeScript/Tailwind, Supabase (Postgres/pgvector), 70+ serverless edge functions, Stripe subscription billing, and role-based portals — and own production end to end: AWS (Bedrock, S3, Lambda), performance budgets, SEO/GEO, and E2E/load testing.",
       "technologies": ["React", "TypeScript", "Tailwind", "Supabase", "pgvector", "AWS Bedrock", "Nova Sonic", "Amazon Polly", "S3", "Lambda", "Stripe", "LLM Agents", "RAG"]
     },
     {
@@ -55,7 +56,7 @@
       "position": "Software Engineer",
       "type": "Full-time",
       "duration": "June 2025 - Present · Islamabad, Pakistan",
-      "description": "Engineered and maintained critical features for the enterprise CRM platforms SugarCRM and SuiteCRM. Built \"talkerCRM\", a LangGraph-based multi-agent assistant that integrates Generative AI into everyday CRM workflows. Focused on scalable backend development and clean architecture across the full software development lifecycle.",
+      "description": "Engineered features across the enterprise CRM platforms SugarCRM and SuiteCRM. Built a LangGraph-based multi-agent assistant that brings generative AI into day-to-day CRM workflows, with a focus on scalable backend development and clean architecture across the full software development lifecycle.",
       "technologies": ["Python", "LangGraph", "LangChain", "LLMs", "SugarCRM", "SuiteCRM", "REST APIs", "Backend Development"]
     }
   ],
@@ -70,145 +71,153 @@
   "projects": [
     {
       "title": "NextGen Schooling — ngedu.ai",
-      "category": "Generative AI · Full-Stack AI",
-      "description": "Flagship AI-powered K–12 homeschooling platform delivering the Australian Curriculum from Year 0 to Year 12. Architected and lead end to end: multiple coordinated LLM agents (AI tutor, classroom agent, daily coach, parent advisor), real-time voice tutoring with AWS Nova Sonic streaming (barge-in) + Amazon Polly TTS, and RAG-based curriculum content generation. Ships role-based portals for students, parents, facilitators, and admins, Stripe subscription billing, and 70+ serverless edge functions in production.",
+      "category": "Generative AI · Full-Stack Platform",
+      "description": "A live AI learning platform delivering the Australian Curriculum (Year 0–12), built on coordinated LLM agents and real-time voice tutoring.",
+      "caseStudy": {
+        "problem": "Homeschooling families following the Australian Curriculum have no single system that turns a national syllabus into daily, personalized instruction. Parents stitch together worksheets and videos with no adaptivity — and no reliable read on whether a child is actually on track.",
+        "approach": "Architected a platform where distinct LLM agents each own a teaching job — an AI tutor for concepts and Q&A, a classroom agent for lesson delivery, a daily coach for pacing, and a parent advisor for progress — instead of overloading a single prompt. Real-time voice tutoring runs on AWS Nova Sonic streaming with barge-in, so a student can interrupt mid-sentence, backed by Amazon Polly TTS. Curriculum content is generated by a syllabus-grounded RAG pipeline (see the RAG Engine case study). Front-end in React/TypeScript/Tailwind; data on Supabase (Postgres + pgvector); 70+ serverless edge functions; Stripe subscription billing; and role-based portals for students, parents, facilitators, and admins.",
+        "role": "Sole architect and engineering lead. Designed the agent topology, the voice pipeline, the data model, and the billing and portal systems — and own production concerns end to end: AWS (Bedrock, S3, Lambda), performance budgets, SEO/GEO, and E2E + load testing.",
+        "impact": "Took the product from zero to a live, paid platform covering the full Year 0–12 curriculum, with four coordinated agents and real-time voice running in production."
+      },
+      "metrics": [
+        { "label": "Curriculum", "value": "Year 0–12" },
+        { "label": "Coordinated agents", "value": "4" },
+        { "label": "Serverless edge fns", "value": "70+" },
+        { "label": "Status", "value": "Live · paid" }
+      ],
       "techStack": ["React", "TypeScript", "Tailwind", "Supabase (Postgres + pgvector)", "AWS Bedrock", "Nova Sonic", "Amazon Polly", "S3", "Lambda", "Stripe", "RAG", "Multi-Agent Systems"],
       "date": "Feb 2026 - Present",
       "status": "Live",
       "featured": true,
       "links": [
-        {
-          "name": "Live Product",
-          "url": "https://www.ngedu.ai"
-        }
+        { "name": "Live Product", "url": "https://www.ngedu.ai" }
       ],
       "images": []
     },
     {
       "title": "NextGen RAG Engine — ngedu.ai Backend",
-      "category": "Production RAG · Backend",
-      "description": "The production RAG engine behind ngedu.ai. A FastAPI service that ingests curriculum syllabi (PDF/DOCX), embeds them with Amazon Titan Text Embeddings V2 into Supabase pgvector, and generates curriculum-aligned readings, quizzes, and slides using Claude 3.5 Sonnet on AWS Bedrock. Engineered for retrieval quality — hybrid search (BM25 sparse + dense vectors) with reranking, query expansion, and a semantic query cache, plus grade-aware content validation and deduplication. Deployed on AWS App Runner.",
+      "category": "Production RAG · Backend / MLOps",
+      "description": "The FastAPI retrieval-and-generation service behind ngedu.ai — turns official syllabus documents into on-grade, on-syllabus readings, quizzes, and slides.",
+      "caseStudy": {
+        "problem": "Ask an LLM to \"generate a Year 7 science reading\" and it hallucinates, drifts off-syllabus, and repeats content across lessons. For a curriculum product, off-syllabus or grade-inappropriate output is a correctness bug — not a cosmetic one.",
+        "approach": "A FastAPI service that ingests syllabus documents (PDF/DOCX), embeds them with Amazon Titan Text Embeddings V2 into Supabase pgvector, and generates content with Claude 3.5 Sonnet on AWS Bedrock. Retrieval quality is engineered deliberately: hybrid search (BM25 sparse + dense vectors) with reranking and query expansion to survive syllabus phrasing mismatches; a semantic query cache to cut latency and Bedrock cost on repeated generations; and grade-aware validation plus deduplication so output stays on-grade and non-repetitive. Containerized with Docker and deployed on AWS App Runner.",
+        "role": "Designed and built the pipeline end to end — ingestion, embedding, hybrid retrieval and rerank, semantic caching, grade-aware validation, and deployment.",
+        "impact": "Turned raw syllabus documents into a grounded generation service that keeps content on-syllabus and on-grade, running live behind ngedu.ai."
+      },
+      "metrics": [
+        { "label": "Retrieval", "value": "Hybrid (BM25 + dense) + rerank" },
+        { "label": "Grounding", "value": "Syllabus-scoped" },
+        { "label": "Caching", "value": "Semantic" },
+        { "label": "Status", "value": "Live in production" }
+      ],
       "techStack": ["FastAPI", "Python", "AWS Bedrock", "Titan Embeddings V2", "Claude 3.5 Sonnet", "Supabase / pgvector", "Hybrid Search (BM25 + Vector)", "Reranking", "Docker", "AWS App Runner"],
       "date": "2026 - Present",
       "status": "Live",
       "featured": true,
       "links": [
-        {
-          "name": "Live Product",
-          "url": "https://www.ngedu.ai"
-        }
+        { "name": "Live Product", "url": "https://www.ngedu.ai" }
       ],
       "images": []
     },
     {
       "title": "DocChat-MultiAgent",
-      "category": "Multi-Agent/RAG",
-      "description": "A multi-agent RAG (Retrieval-Augmented Generation) system powered by Google Gemini, Docling, and LangGraph for intelligent document Q&A with built-in fact-checking and hallucination prevention.",
-      "techStack": ["CrewAI", "Google Gemini API", "Gradio", "Python", "LangGraph"],
-      "date": "December 2025 - December 2025",
+      "category": "Multi-Agent RAG · Personal R&D",
+      "description": "A self-checking document Q&A system where a dedicated verification agent fact-checks each answer against the source before it's returned — the hallucination-control pattern I later applied in production.",
+      "caseStudy": {
+        "problem": "Naive RAG chatbots confidently answer from weak or irrelevant retrievals. There's no internal check that the answer is actually grounded in the retrieved source — so wrong-but-fluent responses ship straight to the user.",
+        "approach": "A multi-agent RAG system orchestrated with LangGraph, where separate agents handle retrieval, answer drafting, and verification. The verifier fact-checks the draft against the retrieved context before anything is returned, rather than trusting a single generation. Documents are parsed with Docling, generation runs on Google Gemini, and the whole thing is wrapped in a Gradio UI.",
+        "role": "Solo build — designed the agent graph and the verification loop end to end.",
+        "impact": "A working demonstration of grounded, self-checking document Q&A. The same verification-before-answer pattern informs the grounding approach used in the production RAG engine above."
+      },
+      "metrics": [
+        { "label": "Orchestration", "value": "LangGraph" },
+        { "label": "Agents", "value": "Retrieve · Draft · Verify" },
+        { "label": "Type", "value": "Open-source" }
+      ],
+      "techStack": ["Python", "LangGraph", "Google Gemini", "Docling", "Gradio"],
+      "date": "December 2025",
       "status": "Completed",
       "featured": true,
       "links": [
-        {
-          "name": "GitHub",
-          "url": "https://github.com/sheraztariq22/DocChat-MultiAgent"
-        }
+        { "name": "GitHub", "url": "https://github.com/sheraztariq22/DocChat-MultiAgent" }
       ],
       "images": []
     },
     {
-      "title": "AI-Nutrition-Coach-via-Multi-Agent",
-      "category": "Agentic AI/NLP",
-      "description": "Built and deployed a multi-agent system that powers intelligent decision-making, integrating multimodal AI to handle both visual and textual data. Wrapped in a friendly Gradio interface so the coaching experience is accessible to anyone.",
+      "title": "AI Nutrition Coach — Multi-Agent",
+      "category": "Agentic AI · Multimodal",
+      "description": "A multi-agent coach that combines vision and text to give nutrition guidance, wrapped in a Gradio interface.",
       "techStack": ["Python", "LangChain", "RAG", "LLMs", "NLP", "Multi-Agent Systems"],
-      "date": "December 2025 - December 2025",
+      "date": "December 2025",
       "status": "Completed",
-      "featured": true,
+      "featured": false,
       "links": [
-        {
-          "name": "GitHub",
-          "url": "https://github.com/sheraztariq22/AI-Nutrition-Coach-via-Multi-Agent"
-        }
+        { "name": "GitHub", "url": "https://github.com/sheraztariq22/AI-Nutrition-Coach-via-Multi-Agent" }
       ],
       "images": []
     },
     {
-      "title": "Meal & Grocery Planner with CrewAI",
-      "category": "Agentic AI/NLP",
-      "description": "A production-ready intelligent meal planning and grocery shopping assistant powered by CrewAI, LangChain, and Google Gemini. Uses a multi-agent architecture to coordinate specialized AI agents for meal research, shopping organization, budget analysis, and waste reduction.",
+      "title": "Meal & Grocery Planner — CrewAI",
+      "category": "Agentic AI",
+      "description": "A CrewAI multi-agent planner that coordinates specialized agents for meal research, shopping, budget analysis, and waste reduction.",
       "techStack": ["Python", "CrewAI", "NLP", "LLMs", "Streamlit"],
-      "date": "December 2025 - December 2025",
+      "date": "December 2025",
       "status": "Completed",
-      "featured": true,
+      "featured": false,
       "links": [
-        {
-          "name": "GitHub",
-          "url": "https://github.com/sheraztariq22/Meal-and-Grocery-"
-        }
+        { "name": "GitHub", "url": "https://github.com/sheraztariq22/Meal-and-Grocery-" }
       ],
       "images": []
     },
     {
-      "title": "Food Recommendation System via RAG",
-      "category": "RAG/Machine Learning",
-      "description": "An intelligent food recommendation system leveraging RAG (Retrieval-Augmented Generation) and vector similarity search. Integrated the Google Gemini API to improve recommendation accuracy and deliver personalized suggestions, built on a scalable architecture for real-time recommendations.",
+      "title": "Food Recommendation System — RAG",
+      "category": "RAG · Machine Learning",
+      "description": "A food recommender using RAG and vector similarity search over the Gemini API for personalized suggestions.",
       "techStack": ["Python", "RAG", "Vector Search", "Google Gemini API", "NLP", "Machine Learning"],
-      "date": "December 2025 - December 2025",
+      "date": "December 2025",
       "status": "Completed",
-      "featured": true,
+      "featured": false,
       "links": [
-        {
-          "name": "GitHub",
-          "url": "https://github.com/sheraztariq22/Food-Recommendation-System-Via-RAG"
-        }
+        { "name": "GitHub", "url": "https://github.com/sheraztariq22/Food-Recommendation-System-Via-RAG" }
       ],
       "images": []
     },
     {
       "title": "AI Icebreaker Bot",
-      "category": "RAG/NLP",
-      "description": "Executed the complete RAG workflow from data extraction to intelligent generation. Used LangChain and LlamaIndex for efficient processing and retrieval, creating an engaging, context-aware icebreaker conversation bot for natural conversations.",
+      "category": "RAG · NLP",
+      "description": "A context-aware icebreaker bot built on a full RAG workflow with LangChain and LlamaIndex.",
       "techStack": ["Python", "LangChain", "LlamaIndex", "RAG", "NLP", "LLMs"],
-      "date": "December 2025 - December 2025",
+      "date": "December 2025",
       "status": "Completed",
-      "featured": true,
+      "featured": false,
       "links": [
-        {
-          "name": "GitHub",
-          "url": "https://github.com/sheraztariq22/Icebreaker-Bot"
-        }
+        { "name": "GitHub", "url": "https://github.com/sheraztariq22/Icebreaker-Bot" }
       ],
       "images": []
     },
     {
       "title": "YouTube Summarizer",
-      "category": "RAG/NLP",
-      "description": "A question-answering (QA) tool that extracts and summarizes information from YouTube videos. Leveraging LangChain and an LLM, it answers specific questions grounded in a video's transcript.",
+      "category": "RAG · NLP",
+      "description": "A QA tool that answers questions grounded in a YouTube video's transcript using LangChain and an LLM.",
       "techStack": ["Python", "LangChain", "NLP", "LLMs", "Data Extraction"],
-      "date": "December 2025 - December 2025",
+      "date": "December 2025",
       "status": "Completed",
-      "featured": true,
+      "featured": false,
       "links": [
-        {
-          "name": "GitHub",
-          "url": "https://github.com/sheraztariq22/Youtube-Summarizer"
-        }
+        { "name": "GitHub", "url": "https://github.com/sheraztariq22/Youtube-Summarizer" }
       ],
       "images": []
     },
     {
-      "title": "Community Automation System Using Blockchain",
-      "category": "Blockchain/AI",
-      "description": "A community automation web application that leverages blockchain technology and AI to streamline community operations, with advanced user-interaction features and decentralized infrastructure for transparent community management.",
+      "title": "Community Automation — Blockchain",
+      "category": "Blockchain · AI",
+      "description": "A community-management web app combining blockchain smart contracts and AI for transparent, decentralized operations. Final-year project.",
       "techStack": ["Blockchain", "IBM Blockchain", "AI", "JavaScript", "Python", "Smart Contracts"],
       "date": "September 2024 - June 2025",
       "status": "Completed",
       "featured": false,
       "links": [
-        {
-          "name": "GitHub",
-          "url": "https://github.com/sheraztariq22/Community-Automation-Blockchain"
-        }
+        { "name": "GitHub", "url": "https://github.com/sheraztariq22/Community-Automation-Blockchain" }
       ],
       "images": []
     }
@@ -229,7 +238,7 @@
     "focusAreas": ["Generative AI", "Agentic / Multi-Agent AI", "Production RAG Systems", "Full-Stack AI Development"],
     "availability": "Open to select AI/ML roles and collaborations",
     "workStyle": "Production-first engineer who takes LLMs from prototype to scalable, enterprise-grade product — owning both the AI pipelines and the full-stack apps on top of them",
-    "goals": "Partner with teams building ambitious Generative AI and agentic products, where I can architect robust LLM systems and the applications that make them accessible to real users."
+    "goals": "Partner with teams building ambitious generative AI and agentic products, where I can architect robust LLM systems and the applications that make them accessible to real users."
   },
   "personality": {
     "traits": ["motivated", "innovative", "detail-oriented", "collaborative", "results-driven"],
@@ -311,8 +320,8 @@
     ]
   },
   "meta": {
-    "configVersion": "3.0",
-    "lastUpdated": "2026-07-04",
+    "configVersion": "4.0",
+    "lastUpdated": "2026-07-05",
     "generatedBy": "Sheraz Tariq",
     "description": "Portfolio configuration for Sheraz Tariq - AI/ML Engineer specializing in Generative AI, Agentic (Multi-Agent) AI, and production RAG systems"
   }

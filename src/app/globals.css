@@ -8,6 +8,9 @@
   --foreground: oklch(0.141 0.005 285.823);
   --brand: oklch(0.54 0.2 277);
   --brand-foreground: oklch(0.985 0 0);
+  /* Signature secondary accent — cyan-teal, reserved for metrics / data */
+  --accent-2: oklch(0.62 0.13 208);
+  --accent-2-foreground: oklch(0.985 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
@@ -44,6 +47,8 @@
   --foreground: oklch(0.985 0 0);
   --brand: oklch(0.68 0.16 277);
   --brand-foreground: oklch(0.141 0.005 285.823);
+  --accent-2: oklch(0.78 0.12 208);
+  --accent-2-foreground: oklch(0.141 0.005 285.823);
   --card: oklch(0.21 0.006 285.885);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.21 0.006 285.885);
@@ -146,4 +151,53 @@ pre {
 /* Prevent body scroll when the AI chat overlay is open */
 body:has([data-ai-overlay="open"]) {
   overflow: hidden;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Design-system utilities (Phase 2)                                  */
+/* ------------------------------------------------------------------ */
+
+/* Fluid display type for the hero — engineered, tight-tracked */
+.text-hero {
+  font-size: clamp(2.6rem, 6.5vw + 0.5rem, 5.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+/* Soft multi-point gradient mesh — brand + secondary accent, low opacity */
+.bg-mesh {
+  background-image:
+    radial-gradient(42% 55% at 18% 12%, color-mix(in oklab, var(--brand) 24%, transparent), transparent 70%),
+    radial-gradient(38% 48% at 88% 22%, color-mix(in oklab, var(--accent-2) 20%, transparent), transparent 72%),
+    radial-gradient(55% 60% at 55% 108%, color-mix(in oklab, var(--brand) 14%, transparent), transparent 72%);
+}
+
+/* Faint film-grain noise (inline SVG data-URI — no network request) */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Sparingly-used glass surface for hierarchy, not decoration */
+.glass {
+  background-color: color-mix(in oklab, var(--card) 72%, transparent);
+  backdrop-filter: blur(12px) saturate(1.1);
+  -webkit-backdrop-filter: blur(12px) saturate(1.1);
+  border: 1px solid color-mix(in oklab, var(--foreground) 9%, transparent);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Accessibility: honour reduced-motion for every animation.          */
+/*  Sanctioned use of !important — overrides utility/inline transitions */
+/*  (this is the a11y escape hatch, not a z-index band-aid).            */
+/* ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

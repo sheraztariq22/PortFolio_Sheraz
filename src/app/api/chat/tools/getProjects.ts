@@ -23,7 +23,9 @@ export const getProjects = tool({
           links: project.links,
         };
         if (project.achievements || project.metrics) {
-          p.highlights = project.achievements || project.metrics;
+          p.highlights =
+            project.achievements ||
+            project.metrics?.map((m) => `${m.label}: ${m.value}`);
         }
         return p;
       }),

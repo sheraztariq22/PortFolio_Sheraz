@@ -4,6 +4,8 @@ export interface PersonalInfo {
   location: string;
   title: string;
   tagline: string;
+  /** One quantified, above-the-fold proof point for the hero. Real numbers / scope only. */
+  proofPoint?: string;
   email: string;
   phone?: string;
   handle: string;
@@ -58,6 +60,20 @@ export interface ProjectImage {
   alt: string;
 }
 
+/** A single stat block. Real numbers or concrete scope only — never invented percentages. */
+export interface Metric {
+  label: string;
+  value: string;
+}
+
+/** Structured case-study narrative for featured projects: problem → approach → role → impact. */
+export interface CaseStudy {
+  problem: string;
+  approach: string;
+  role: string;
+  impact: string;
+}
+
 export interface Project {
   title: string;
   category: string;
@@ -66,8 +82,9 @@ export interface Project {
   date: string;
   status: string;
   featured: boolean;
+  caseStudy?: CaseStudy;
   achievements?: string[];
-  metrics?: string[];
+  metrics?: Metric[];
   links: ProjectLink[];
   images: ProjectImage[];
 }
