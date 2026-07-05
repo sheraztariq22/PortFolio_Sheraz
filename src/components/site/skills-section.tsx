@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { getConfig } from '@/lib/config-loader';
 import { Section, Reveal } from './section';
+import { HoverLift } from './motion-primitives';
 
 export function SkillsSection() {
   const { skills, certifications } = getConfig();
@@ -64,6 +65,7 @@ export function SkillsSection() {
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {groups.map((group, i) => (
           <Reveal key={group.label} delay={i * 0.04}>
+            <HoverLift y={-3} className="h-full">
             <div className="border-border bg-card hover:border-foreground/20 h-full rounded-xl border p-5 transition-colors">
               <div className="flex items-center gap-2.5">
                 <span className="bg-brand/10 text-brand flex h-8 w-8 items-center justify-center rounded-md">
@@ -89,6 +91,7 @@ export function SkillsSection() {
                 ))}
               </div>
             </div>
+            </HoverLift>
           </Reveal>
         ))}
       </div>

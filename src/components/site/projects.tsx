@@ -4,6 +4,7 @@ import { ArrowUpRight, Github, Globe } from 'lucide-react';
 import { getConfig } from '@/lib/config-loader';
 import type { Metric, Project, ProjectLink } from '@/types/portfolio';
 import { Section, Reveal } from './section';
+import { HoverLift, Magnetic } from './motion-primitives';
 
 function initials(title: string) {
   const cleaned = title.split('—')[0].split('·')[0].trim();
@@ -78,7 +79,7 @@ function CaseStudyCard({ project }: { project: Project }) {
     : [];
 
   return (
-    <div className="group border-border bg-card hover:border-foreground/20 overflow-hidden rounded-2xl border transition-colors">
+    <div className="group border-border bg-card hover:border-foreground/20 hover:shadow-brand/5 overflow-hidden rounded-2xl border transition-[color,box-shadow,border-color] hover:shadow-lg">
       {/* header band */}
       <div className="border-border from-brand/15 relative border-b bg-gradient-to-br to-transparent p-6 md:p-8">
         <div className="bg-dot-grid mask-radial-faded absolute inset-0 opacity-30" />
@@ -215,7 +216,9 @@ export function Projects() {
       <div className="space-y-6">
         {caseStudies.map((project, i) => (
           <Reveal key={project.title} delay={i * 0.05}>
-            <CaseStudyCard project={project} />
+            <HoverLift y={-3}>
+              <CaseStudyCard project={project} />
+            </HoverLift>
           </Reveal>
         ))}
       </div>
@@ -231,7 +234,9 @@ export function Projects() {
           <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {more.map((project, i) => (
               <Reveal key={project.title} delay={i * 0.04}>
-                <CompactCard project={project} />
+                <Magnetic strength={0.08} className="h-full">
+                  <CompactCard project={project} />
+                </Magnetic>
               </Reveal>
             ))}
           </div>
