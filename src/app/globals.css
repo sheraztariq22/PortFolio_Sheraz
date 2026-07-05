@@ -8,8 +8,9 @@
   --foreground: oklch(0.141 0.005 285.823);
   --brand: oklch(0.54 0.2 277);
   --brand-foreground: oklch(0.985 0 0);
-  /* Signature secondary accent — cyan-teal, reserved for metrics / data */
-  --accent-2: oklch(0.62 0.13 208);
+  /* Signature secondary accent — cyan-teal, reserved for metrics / data.
+     Kept dark enough in light mode to clear WCAG AA on small text. */
+  --accent-2: oklch(0.52 0.12 218);
   --accent-2-foreground: oklch(0.985 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
@@ -84,9 +85,20 @@
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Consistent, always-visible keyboard focus for interactive elements
+     (form controls carry their own ring). WCAG 2.4.7. */
+  a:focus-visible,
+  button:focus-visible,
+  [role='button']:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+    border-radius: var(--radius);
   }
 }
 

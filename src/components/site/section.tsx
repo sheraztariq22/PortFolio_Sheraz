@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 /**
  * Scroll-reveal wrapper. Fades + lifts children into view once.
- * Respects the shared minimal motion language across the site.
+ * Under prefers-reduced-motion it renders statically — no fade, no lift.
  */
 export function Reveal({
   children,
@@ -17,6 +17,12 @@ export function Reveal({
   className?: string;
   delay?: number;
 }) {
+  const reduce = useReducedMotion();
+
+  if (reduce) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}

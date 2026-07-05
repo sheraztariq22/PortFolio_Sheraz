@@ -69,7 +69,7 @@ function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="flex h-full flex-col items-center justify-center gap-3 py-10 text-center">
+      <div role="status" className="flex h-full flex-col items-center justify-center gap-3 py-10 text-center">
         <span className="bg-emerald-500/12 text-emerald-600 dark:text-emerald-400 flex h-12 w-12 items-center justify-center rounded-full">
           <CheckCircle2 className="h-6 w-6" />
         </span>

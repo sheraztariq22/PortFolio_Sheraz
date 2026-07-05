@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { FileDown, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { getConfig } from '@/lib/config-loader';
@@ -20,6 +20,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const [active, setActive] = React.useState('');
+  const reduce = useReducedMotion();
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -85,7 +86,7 @@ export function Navbar() {
                 {link.label}
                 {isActive && (
                   <motion.span
-                    layoutId="nav-active"
+                    layoutId={reduce ? undefined : 'nav-active'}
                     className="bg-brand absolute inset-x-3 -bottom-px h-0.5 rounded-full"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
